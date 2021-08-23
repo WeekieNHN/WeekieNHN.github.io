@@ -1,0 +1,24 @@
+main:
+  - title: "Portfolio"
+    url: /projects/
+  - title: "Contact"
+    url: /contact/
+
+projects:
+  - title: "Projects"
+    children:
+      - title: "Overview"
+        url: /projects/
+  - title: Games
+    children:
+      - title: "Launch My Dog"
+        url: /projects/launch-my-dog/
+      - title: "Poke My Balls"
+        url: /projects/poke-my-balls/
+
+  - title: Physical Programming
+    children:
+      - title: "CSGO Prop"
+        url: /projects/csgo-prop/
+      - title: "Web Development"
+        url: /projects/web-dev/
