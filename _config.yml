@@ -85,8 +85,8 @@ defaults:
       related: true
 
 # Build settings
-theme: minimal-mistakes-jekyll
-#remote_theme: mmistakes/minimal-mistakes
+#theme: minimal-mistakes-jekyll
+remote_theme: mmistakes/minimal-mistakes
 plugins:
   - jekyll-feed
   - jekyll-include-cache
