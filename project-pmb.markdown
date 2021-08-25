@@ -29,7 +29,7 @@ _By Frank "Weekie" Podraza_
 
 This project is released and has an official landing page.
 
-[**Check it out**](/poke-my-balls/){:target="_blank" .btn .btn--info .align-center}
+[**Check it out**](https://www.nerdherd.network/poke-my-balls/){:target="_blank" .btn .btn--info .align-center}
 
 ![logo-right](/assets/images/PMB Icon.png){: .align-right height="30%" width="30%"}
 Poke My Balls is an iOS and Android arcade game. Colored balls fall down, and you must poke all of one color, and none of the others. Compete with your friends for the highscore. Poke blue balls, red balls, black balls too. Poke My Balls was released on August 22nd, 2016. After being in development for a couple months.
