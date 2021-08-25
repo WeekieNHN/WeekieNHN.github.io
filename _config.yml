@@ -24,27 +24,27 @@ description: >- # this means to ignore newlines until "baseurl:"
   Launch My Dog is out now on iOS and Google Play.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.frankpodraza.net" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: NerdHerdNetwork
-github_username:  NerdHerdNetwork
+twitter_username: Weekie_NHN
+github_username:  WeekieNHN
 locale: "en-US"
 
 footer:
   links:
+    - label: "Youtube"
+      icon: "fab fa-youtube"
+      url: "https://www.youtube.com/channel/UCqR1s3Jy4bRMN9c5XGLuLOQ"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/NerdHerdNetwork"
-    - label: "Instagram"
+      url: "https://twitter.com/Weekie_NHN"
+      label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://www.instagram.com/nerdherdnetwork/"
-    - label: "YouTube"
-      icon: "fab fa-fw fa-youtube"
-      url: "https://www.youtube.com/channel/UCpURw2zFdFp81UWlfRXXAHQ"
-    - label: "Github"
+      url: "https://www.instagram.com/weekie_nhn/"
+    - label: "Reddit"
+      icon: "fab fa-fw fa-reddit"
+      url: "https://www.reddit.com/user/WeekieNHN"
+    - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/NerdHerdNetwork"
-    - label: "Twitch"
-      icon: "fab fa-fw fa-twitch"
-      url: "https://www.twitch.tv/thenerdherdnetwork"
+      url: "https://github.com/WeekieNHN"
     - label: "Contact"
       url: "/contact/"
 
