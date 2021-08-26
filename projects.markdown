@@ -45,3 +45,7 @@ The CSGO Prop is a raspberry pi based box which acts as a prop C4 from the game 
 [**Check it out**](/projects/csgo-prop/){: .btn .btn--info}
 
 ## Website(s)
+
+I (Frank Podraza) developed both this website and the Nerd Herd Network website. This website is my personal portfolio and the Nerd Herd Network website is for the entire organization.
+
+[**Check it out**](https://www.nerdherd.network/){: .btn .btn--info}
