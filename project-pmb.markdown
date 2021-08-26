@@ -7,20 +7,20 @@ sidebar:
 share: true
 
 gallery:
-  - url: /assets/images/poke-my-balls/screen-main.png
-    image_path: /assets/images/poke-my-balls/screen-main.png
+  - url: /assets/images/poke-my-balls/screen-main.PNG
+    image_path: /assets/images/poke-my-balls/screen-main.PNG
     alt: "PMB Menu"
     title: "Poke My Balls menu"
-  - url: /assets/images/poke-my-balls/screen-game.png
-    image_path: /assets/images/poke-my-balls/screen-game.png
+  - url: /assets/images/poke-my-balls/screen-game.PNG
+    image_path: /assets/images/poke-my-balls/screen-game.PNG
     alt: "PMB Game"
     title: "Poke My Balls in-game"
-  - url: /assets/images/poke-my-balls/screen-shop.png
-    image_path: /assets/images/poke-my-balls/screen-shop.png
+  - url: /assets/images/poke-my-balls/screen-shop.PNG
+    image_path: /assets/images/poke-my-balls/screen-shop.PNG
     alt: "PMB Shop"
     title: "Poke My Balls shop"
-  - url: /assets/images/poke-my-balls/screen-blue.png
-    image_path: /assets/images/poke-my-balls/screen-blue.png
+  - url: /assets/images/poke-my-balls/screen-blue.PNG
+    image_path: /assets/images/poke-my-balls/screen-blue.PNG
     alt: "PMB Menu Blue"
     title: "Poke My Balls menu with blue background active"
 ---
