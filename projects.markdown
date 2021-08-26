@@ -13,7 +13,7 @@ This is a compilation of all of the projects produced or being produced by the N
 
 # Games
 
-[**Frank Podraza**](/about/frank/){:target="_blank"} is the games lead here. He has built 2 mobile games and is beginning work on his first PC game. These games are either under development or released.
+I have built 2 mobile games and I'm beginning work on my first PC game. These games are either under development or released.
 
 ## Launch My Dog
 
@@ -36,11 +36,11 @@ Poke my Balls is a fun, simple, and addicting game, for the time when you have a
 
 # Physical Programming
 
-Physical Programming is what we are using as a catch-all term for projects that are more than just software. These projects have some physical component too.
+Physical Programming is what I am using as a catch-all term for projects that are more than just software. These projects have some physical component too.
 
 ## CSGO Prop
 
-The CSGO Prop is a raspberry pi based box which acts as a prop C4 from the game CSGO. Built entirely in python using the pygame library, the CSGO Prop allows the user to play CSGO in real life with nerf guns. It has multiple game modes. There is a CSGO game mode, of course, but also King of the Hill from Halo, or Call of Duty, as well as secure area from Rainbow 6 Siege.
+The CSGO Prop is a raspberry pi based box which acts as a prop C4 from the game CSGO. Built entirely in python using the pygame library, the CSGO Prop allows the user to play CSGO in real life with nerf guns. It has multiple game modes. There is a CSGO game mode, of course, but also King of the Hill from Halo, as well as secure area from Rainbow 6 Siege.
 
 [**Check it out**](/projects/csgo-prop/){: .btn .btn--info}
 
