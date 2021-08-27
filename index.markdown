@@ -7,6 +7,11 @@ title: Home
 author_profile: true
 author: Frank
 
+toc: true
+toc_label: "Table of Contents"
+toc_icon: "cog"
+toc_sticky: true 
+
 lmdGallery:
   - url: /assets/images/launch-my-dog/SE Screenshot 1.png
     image_path: /assets/images/launch-my-dog/SE Screenshot 1.png
