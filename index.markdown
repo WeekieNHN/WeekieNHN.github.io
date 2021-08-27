@@ -88,11 +88,44 @@ I wanted a way to play Counter Strike in real life with my friends. I decided to
 
 [**More Info**](/projects/csgo-prop/){:target="_blank" .btn .btn--info}
 
+## My Skills
+
+Since this is my portfolio, I wanted to list the skills I have acquired of the past 7 years of programming, video production, and game development.
+
+### Skills/Programs
+- Adobe Creative Cloud Suite  
+  - Premiere Pro
+  - After Effects
+  - Photoshop
+  - Audition
+  - Media Encoder
+- The C Programming language
+- C#
+- C++
+- JavaScript
+- Java
+- Assembly Language/Machine code
+- Python
+- Shell programming
+- HTML/CSS
+- Unity game engine
+- Unreal Engine 4
+- The Microsoft Office Suite
+  - Word
+  - Excel
+  - PowerPoint
+- The big 3 operating systems
+  - Windows
+  - MacOS
+  - Linux (Ubuntu, Debian, Arch)
+- Jekyll, Static site generation
+- The YouTube interface
+
 ## The Future
 
-Now the Launch My Dog is complete, I want to start work on other projects. I no longer want to work on mobile games, and rather want to develop a PC game. I want to spend time honing my programming skills, and general project workflow. I have worked on First-Person-Shooter prototypes in the past, but none came to fruition. I also spent time on a possible parkour racing game in the Unreal Engine. When I start working on something, you will find it here.
+Now the Launch My Dog is complete, I want to start work on other projects. I no longer want to work on mobile games, and rather want to develop a PC game. I want to spend time honing my programming skills, and general project workflow. I have worked on First-Person-Shooter prototypes in the past, but none came to fruition. I also spent time on a possible parkour racing game in the Unreal Engine. If I had to make a short list it would be this:
 
-### Things I'd like to get into
+### Future Prospects
 - PC development
 - Networked Multiplayer Programming
 - User generated content though in-game means (i.e. a level editor)
