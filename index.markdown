@@ -114,22 +114,29 @@ Since this is my portfolio, I wanted to list the skills I have acquired of the p
   - Word
   - Excel
   - PowerPoint
-- The big 3 operating systems
+- The Big 3 operating systems
   - Windows
   - MacOS
   - Linux (Ubuntu, Debian, Arch)
 - Jekyll, Static site generation
 - The YouTube interface
+- OBS (Open Broadcasting System)
+- Development tools
+  - GitHub
+  - Trello
 
 ## The Future
 
-Now the Launch My Dog is complete, I want to start work on other projects. I no longer want to work on mobile games, and rather want to develop a PC game. I want to spend time honing my programming skills, and general project workflow. I have worked on First-Person-Shooter prototypes in the past, but none came to fruition. I also spent time on a possible parkour racing game in the Unreal Engine. If I had to make a short list it would be this:
+Now the Launch My Dog is complete, I want to start work on other projects. I no longer want to work on mobile games, and rather want to develop a PC game. I want to spend time honing my programming skills, and general project workflow. I have worked on First-Person-Shooter prototypes in the past, but none came to fruition. I also spent time on a possible parkour racing game in the Unreal Engine. If I had to make a short list of interests it would be this:
 
 ### Future Prospects
 - PC development
 - Networked Multiplayer Programming
 - User generated content though in-game means (i.e. a level editor)
 - Publishing on Steam
+- First-Person Game Design
+
+I will likely work next on a game with the running title of Castle Wars. Based on the Halo Reach gamemode of the same name. Castle Wars would be a simple networked multiplayer game where two fights over the control of the other's castles. It would be published on steam and be primary a PC game.
 
 ## Follow Me
 
