@@ -53,7 +53,7 @@ I like to make games. I developed [**Poke My Balls**](/projects/poke-my-balls/){
 
 This project has been released and has an official landing page.
 
-[**Official Landing Page**](https://www.nerdherd.network/launch-my-dog/){: .btn .btn--warning target="_blank" .align-center}
+[**Official Landing Page**](https://www.nerdherd.network/launch-my-dog/){: .btn .btn--info target="_blank" .align-center}
 
 ![image-left](/assets/images/LMD Icon.png){: .align-left height="45%" width="35%"}
 Launch My Dog is a game where you launch a hot dog into a bun. Things get in the way. I almost finished this game back in 2018, but felt that it wasn't fun enough to release. I came back to it early 2020 and slowly worked on it until it was complete. The goal was a tight small game that I can release on Mobile. There's some fun programming in here like projectile trajectory prediction, even through different mediums. I have learned a lot about optimization with this project. The original had all the levels loaded simultaneously, which was awfully slow. Now it loads each level additively as a scene, on top of a base scene, which is considerably faster. This performance boost allowed me to push other aspects of the game, like level complexity. Launch My Dog released on July 10th, 2021. It is available on both the iOS App Store and Google Play. I am currently working on extra levels and general quality of life improvements.
@@ -67,10 +67,10 @@ Launch My Dog is a game where you launch a hot dog into a bun. Things get in the
 
 This project has been released and has an official landing page.
 
-[**Official Landing Page**](https://www.nerdherd.network/poke-my-balls/){: .btn .btn--warning target="_blank" .align-center}
+[**Official Landing Page**](https://www.nerdherd.network/poke-my-balls/){: .btn .btn--info target="_blank" .align-center}
 
 ![image-right](/assets/images/PMB Icon.png){: .align-right height="30%" width="30%"}
-Poke My Balls started as a project called Tap2Kill. It's a simple game where different colored balls fall and you have to tap all of one color, but none of the other colors. My Father came up with the name one day and it stuck. I used this project as a way to start learning programming, and the Unity engine. I have come back to it over the years to implement concepts I have learned in university. Most recently, I used a class/subclass structure and polymorphism to make the game modes load as if they were game cartridges being put into a game console. There is one system that handles loading, and storing data (The "console"), and another that handles all the behaviors of the game (The "cartridge").
+Poke My Balls started as a project called Tap2Kill. It's a simple game where different colored balls fall and you have to tap all of one color, but none of the other colors. My Father came up with the name one day and it stuck. I used this project as a way to start learning programming, and the Unity engine. I have come back to it over the years to implement concepts I have learned in university. Most recently, I used a class/subclass structure and polymorphism to make the game modes load as if they were game cartridges being put into a game console. There is one system that handles loading, and storing data (The "console"), and another that handles all the behaviors of the game (The "cartridge"). Poke My Balls released in August of 2016 and has been updated every once in a while since then.
 
 ## Poke My Balls Screenshot Gallery
 {% include gallery id="pmbGallery" layout="half" %}
@@ -80,7 +80,11 @@ Poke My Balls started as a project called Tap2Kill. It's a simple game where dif
 ## CSGO Prop
 
 
-Poke My Balls started as a project called Tap2Kill. It's a simple game where different colored balls fall and you have to tap all of one color, but none of the other colors. My Father came up with the name one day and it stuck. I used this project as a way to start learning programming, and the Unity engine. I have come back to it over the years to implement concepts I have learned in university. Most recently, I used a class/subclass structure and polymorphism to make the game modes load as if they were game cartridges being put into a game console. There is one system that handles loading, and storing data (The "console"), and another that handles all the behaviors of the game (The "cartridge").
+I wanted a way to play Counter Strike in real life with my friends. I decided to build a Raspberry Pi powered box with a touchscreen a speakers that would act as the C4 from the game. It originally ran a Unity application on the Windows 10 IOT platform. In desperate need of a speed-up I rewrote the entire project in python using the pygame library. I had wanted to learn python and this was an excellent outlet to do so. There is the defuse gamemode from Counter Strike, as well as King-of-the-Hill and Secure Area from Rainbow Six: Siege.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/K_t29QqYVi8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+
+----
 
 [**More Info**](/projects/csgo-prop/){:target="_blank" .btn .btn--info}
 
