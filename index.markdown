@@ -10,7 +10,7 @@ author: Frank
 toc: true
 toc_label: "Table of Contents"
 toc_icon: "cog"
-toc_sticky: true 
+toc_sticky: true
 
 lmdGallery:
   - url: /assets/images/launch-my-dog/SE Screenshot 1.png
@@ -49,6 +49,8 @@ pmbGallery:
     title: "Poke My Balls menu with blue background active"
 ---
 
+## Bio
+
 ![image-right](/assets/images/frank.jpg){: .align-right height="50%" width="50%"}
 My Name is Frank Podraza, I go by Weekie on [**YouTube**](https://www.youtube.com/channel/UCqR1s3Jy4bRMN9c5XGLuLOQ){:target="_blank"}, [**Instagram**](https://www.instagram.com/weekie_nhn/){:target="_blank"}, [**Twitter**](https://twitter.com/Weekie_NHN){:target="_blank"}, and pretty much any social media I'm on. I created the [**Nerd Herd Network**](/about/){:target="_blank"}, I run the Nerd Herd YouTube Channel and this website.
 
@@ -63,7 +65,7 @@ This project has been released and has an official landing page.
 ![image-left](/assets/images/LMD Icon.png){: .align-left height="45%" width="35%"}
 Launch My Dog is a game where you launch a hot dog into a bun. Things get in the way. I almost finished this game back in 2018, but felt that it wasn't fun enough to release. I came back to it early 2020 and slowly worked on it until it was complete. The goal was a tight small game that I can release on Mobile. There's some fun programming in here like projectile trajectory prediction, even through different mediums. I have learned a lot about optimization with this project. The original had all the levels loaded simultaneously, which was awfully slow. Now it loads each level additively as a scene, on top of a base scene, which is considerably faster. This performance boost allowed me to push other aspects of the game, like level complexity. Launch My Dog released on July 10th, 2021. It is available on both the iOS App Store and Google Play. I am currently working on extra levels and general quality of life improvements.
 
-## Launch My Dog Screenshot Gallery
+### Launch My Dog Screenshot Gallery
 {% include gallery id="lmdGallery" layout="half" %}
 
 [**More Info**](/projects/launch-my-dog/){: .btn .btn--info target="_blank"}
@@ -77,7 +79,7 @@ This project has been released and has an official landing page.
 ![image-right](/assets/images/PMB Icon.png){: .align-right height="30%" width="30%"}
 Poke My Balls started as a project called Tap2Kill. It's a simple game where different colored balls fall and you have to tap all of one color, but none of the other colors. My Father came up with the name one day and it stuck. I used this project as a way to start learning programming, and the Unity engine. I have come back to it over the years to implement concepts I have learned in university. Most recently, I used a class/subclass structure and polymorphism to make the game modes load as if they were game cartridges being put into a game console. There is one system that handles loading, and storing data (The "console"), and another that handles all the behaviors of the game (The "cartridge"). Poke My Balls released in August of 2016 and has been updated every once in a while since then.
 
-## Poke My Balls Screenshot Gallery
+### Poke My Balls Screenshot Gallery
 {% include gallery id="pmbGallery" layout="half" %}
 
 [**More Info**](/projects/poke-my-balls/){:target="_blank" .btn .btn--info}
@@ -143,6 +145,6 @@ Now the Launch My Dog is complete, I want to start work on other projects. I no 
 
 I will likely work next on a game with the running title of Castle Wars. Based on the Halo Reach gamemode of the same name. Castle Wars would be a simple networked multiplayer game where two fights over the control of the other's castles. It would be published on steam and be primary a PC game.
 
-## Follow Me
+### Follow Me
 
 <a href="https://www.youtube.com/channel/UCqR1s3Jy4bRMN9c5XGLuLOQ" class="btn btn--danger">Youtube</a> <a href="https://www.instagram.com/weekie_nhn/" class="btn btn--warning">Instagram</a> <a href="https://twitter.com/Weekie_NHN" class="btn btn--info">Twitter</a>
