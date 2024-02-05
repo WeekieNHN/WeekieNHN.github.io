@@ -1,6 +1,9 @@
 main:
   - title: "Portfolio"
     url: /projects/
+    children:
+      - title: "Launch My Dog"
+      url: /projects/launch-my-dog/
   - title: "Contact"
     url: /contact/
 
@@ -15,7 +18,6 @@ projects:
         url: /projects/launch-my-dog/
       - title: "Poke My Balls"
         url: /projects/poke-my-balls/
-
   - title: Physical Programming
     children:
       - title: "CSGO Prop"
