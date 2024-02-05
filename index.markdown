@@ -49,7 +49,7 @@ pmbGallery:
     title: "Poke My Balls menu with blue background active"
 ---
 
-## Bio
+## Summary
 
 ![image-right](/assets/images/frank-crop.png){: .align-right height="50%" width="50%"}
 My name is Frank Podraza, I also go by Weekie on [**YouTube**](https://www.youtube.com/channel/UCqR1s3Jy4bRMN9c5XGLuLOQ){:target="_blank"}, [**Instagram**](https://www.instagram.com/weekie_nhn/){:target="_blank"}, [**Twitter**](https://twitter.com/Weekie_NHN){:target="_blank"}, and pretty much any social media I'm on. I created the [**Nerd Herd Network**](https://www.nerdherd.network/){:target="_blank"}.
@@ -104,7 +104,7 @@ Poke My Balls started as a project called Tap2Kill. It's a simple game where dif
 
 [**More Info**](/projects/poke-my-balls/){:target="_blank" .btn .btn--info}
 
-## CSGO Prop (2018)
+## CSGO Prop (2019)
 
 I wanted a way to play Counter Strike in real life with my friends. I decided to build a Raspberry Pi powered box with a touchscreen and speakers that would act as the C4 from the game. I wrote the entire project in python using the pygame library. I had wanted to learn python and this was an excellent outlet to do so. There is the defuse gamemode from Counter Strike, as well as King-of-the-Hill and Secure Area from Rainbow Six: Siege.
 
