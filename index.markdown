@@ -52,11 +52,31 @@ pmbGallery:
 ## Bio
 
 ![image-right](/assets/images/frank.jpg){: .align-right height="50%" width="50%"}
-My Name is Frank Podraza, I also go by Weekie on [**YouTube**](https://www.youtube.com/channel/UCqR1s3Jy4bRMN9c5XGLuLOQ){:target="_blank"}, [**Instagram**](https://www.instagram.com/weekie_nhn/){:target="_blank"}, [**Twitter**](https://twitter.com/Weekie_NHN){:target="_blank"}, and pretty much any social media I'm on. I created the [**Nerd Herd Network**](/about/){:target="_blank"}.
+My name is Frank Podraza, I also go by Weekie on [**YouTube**](https://www.youtube.com/channel/UCqR1s3Jy4bRMN9c5XGLuLOQ){:target="_blank"}, [**Instagram**](https://www.instagram.com/weekie_nhn/){:target="_blank"}, [**Twitter**](https://twitter.com/Weekie_NHN){:target="_blank"}, and pretty much any social media I'm on. I created the [**Nerd Herd Network**](https://www.nerdherd.network/){:target="_blank"}.
 
 I make games. I developed [**Poke My Balls**](/projects/poke-my-balls/){:target="_blank"} back in 2016, the [**CSGO Prop**](/projects/csgo-prop/){:target="_blank"} in 2019, and I released [**Launch My Dog**](/projects/launch-my-dog/){:target="_blank"} in 2021. I recently graduated with honors from the University of California, Santa Cruz, with a bachelors in computer science. I am currently starting a career in software and game development.
 
-## Launch My Dog
+
+## Castle Wars (tent. 2025)
+
+I've spent the past 2 years developing prototypes of first-person games. The current prototype is under the moniker of "Castle Wars". It is based on the Halo Reach gamemode of the same name. Castle Wars would be a simple networked multiplayer game where two teams fight over the control of the other's castles. It would be published on Steam, and be primarily a PC game (though if it finds success, expansion to other platforms is on the table).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=muBRuTV5VrMVnUed&amp;list=PLMQOp_clEoIvpAsdC6uXolmDoaQtEhrOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+I am running a (somewhat out of date) blog on the prototype at [**The Nerd Herd Network Website**](https://www.nerdherd.network/castle-wars/)
+
+---
+
+### Notable features of the Castle Wars Prototype
+- Network-first game design
+- Extensive first-person character controller with many movement abilities including: dashing and sliding, flying, swimming, ability to change gravities, and walk on planets, climbing, and directed Movement (man cannons)
+- Local and networked split-screen
+- Steam integration and online multiplayer
+- Lobbies for collecting players, setting up the game, and assigning teams
+- Auto-generating settings menus 
+- Client-side predictive, server authenticated movement to prevent cheating
+
+## Launch My Dog (2021)
 
 This project has been released and has an official landing page.
 
@@ -70,7 +90,7 @@ Launch My Dog is a game where you launch a hot dog into a bun, but I put a bunch
 
 [**More Info**](/projects/launch-my-dog/){: .btn .btn--info target="_blank"}
 
-## Poke My Balls
+## Poke My Balls (2016)
 
 This project has been released and has an official landing page.
 
@@ -84,7 +104,7 @@ Poke My Balls started as a project called Tap2Kill. It's a simple game where dif
 
 [**More Info**](/projects/poke-my-balls/){:target="_blank" .btn .btn--info}
 
-## CSGO Prop
+## CSGO Prop (2018)
 
 I wanted a way to play Counter Strike in real life with my friends. I decided to build a Raspberry Pi powered box with a touchscreen and speakers that would act as the C4 from the game. I wrote the entire project in python using the pygame library. I had wanted to learn python and this was an excellent outlet to do so. There is the defuse gamemode from Counter Strike, as well as King-of-the-Hill and Secure Area from Rainbow Six: Siege.
 
@@ -94,38 +114,15 @@ I wanted a way to play Counter Strike in real life with my friends. I decided to
 
 [**More Info**](/projects/csgo-prop/){:target="_blank" .btn .btn--info}
 
-## The Near-future
-
-I've spent significant portions of my time the past 2 years developing prototypes of first-person games. I have worked on First-Person-Shooter prototypes in the past, but none came to fruition. The current prototype is under the moniker of "Castle Wars". Based on the Halo Reach gamemode of the same name. Castle Wars would be a simple networked multiplayer game where two teams fight over the control of the other's castles. It would be published on steam and be primary a PC game (though if it find success expansion to other platforms is on the table).
-
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=muBRuTV5VrMVnUed&amp;list=PLMQOp_clEoIvpAsdC6uXolmDoaQtEhrOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
----
-
-### Notable features of the Castle Wars Prototype
-- Network-First game design
-- Extensive first-person character controller with many movement abilities
-  - Dashing and Sliding
-  - Flying
-  - Swimming
-  - Ability to change gravities, and walk on planets
-  - Climbing
-  - Directed Movement (man cannons)
-- Split-screen, and networked split-screen
-- Steam integration and online player
-- Lobbies for collecting players, setting up the game, and assigning teams
-- Autogenerating settings menu
-- Client-side predictive, server authenticated movement to prevent cheating
-
 ### Future Prospects and Interests
 - PC game development
 - Engine programming
-- Networked Multiplayer Programming
-- User generated content though in-game means (i.e. a level editor)
+- Networked multiplayer programming
+- User-generated content though in-game means (i.e. a level editor)
+- User-generated content through outside-of-game means (i.e. mod support)
 - Publishing on Steam
-- First-Person Game Design
+- First-person game design
 
-### Follow Me on Socials
+## Follow Me on Socials
 
 <a href="https://www.youtube.com/channel/UCqR1s3Jy4bRMN9c5XGLuLOQ" class="btn btn--danger">Youtube</a> <a href="https://www.instagram.com/weekie_nhn/" class="btn btn--warning">Instagram</a> <a href="https://twitter.com/Weekie_NHN" class="btn btn--info">Twitter</a>
