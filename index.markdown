@@ -3,7 +3,6 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: single
-title: Home
 author_profile: true
 author: Frank
 
@@ -52,7 +51,7 @@ pmbGallery:
 ## Summary
 
 ![image-right](/assets/images/frank-crop.png){: .align-right height="50%" width="50%"}
-My name is Frank Podraza, I also go by Weekie on [**YouTube**](https://www.youtube.com/channel/UCqR1s3Jy4bRMN9c5XGLuLOQ){:target="_blank"}, [**Instagram**](https://www.instagram.com/weekie_nhn/){:target="_blank"}, [**Twitter**](https://twitter.com/Weekie_NHN){:target="_blank"}, and pretty much any social media I'm on. I created the [**Nerd Herd Network**](https://www.nerdherd.network/){:target="_blank"}.
+My name is Frank Podraza, I also go by Weekie on [**YouTube**](https://www.youtube.com/@weekie){:target="_blank"}, [**Instagram**](https://www.instagram.com/weekie_nhn/){:target="_blank"}, [**Twitter**](https://twitter.com/Weekie_NHN){:target="_blank"}, and pretty much any social media I'm on. I created the [**Nerd Herd Network**](https://www.nerdherd.network/){:target="_blank"}.
 
 I make games. I developed [**Poke My Balls**](/projects/poke-my-balls/){:target="_blank"} back in 2016, the [**CSGO Prop**](/projects/csgo-prop/){:target="_blank"} in 2019, and I released [**Launch My Dog**](/projects/launch-my-dog/){:target="_blank"} in 2021. I recently graduated with honors from the University of California, Santa Cruz, with a bachelors in computer science. I am currently starting a career in software and game development.
 
@@ -67,7 +66,7 @@ I've spent the past 2 years developing prototypes of first-person games. The cur
 
 I am running a (somewhat out of date) blog on the prototype at [**the Nerd Herd Network website**](https://www.nerdherd.network/castle-wars/).
 
-### Notable features of the Castle Wars Prototype
+### Notable features
 - Network-first game design
 - Extensive first-person character controller with many movement abilities including: dashing and sliding, flying, swimming, ability to change gravities, and walk on planets, climbing, and directed Movement (man cannons)
 - Local and networked split-screen
@@ -75,6 +74,8 @@ I am running a (somewhat out of date) blog on the prototype at [**the Nerd Herd 
 - Lobbies for collecting players, setting up the game, and assigning teams
 - Auto-generating settings menus 
 - Client-side predictive, server authenticated movement to prevent cheating
+
+### Screenshot Gallery
 
 ## Launch My Dog (2021)
 
