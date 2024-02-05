@@ -3,6 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: single
+title: Summary
 author_profile: true
 author: Frank
 
@@ -48,8 +49,6 @@ pmbGallery:
     title: "Poke My Balls menu with blue background active"
 ---
 
-## Summary
-
 ![image-right](/assets/images/frank-crop.png){: .align-right height="50%" width="50%"}
 My name is Frank Podraza, I also go by Weekie on [**YouTube**](https://www.youtube.com/@weekie){:target="_blank"}, [**Instagram**](https://www.instagram.com/weekie_nhn/){:target="_blank"}, [**Twitter**](https://twitter.com/Weekie_NHN){:target="_blank"}, and pretty much any social media I'm on. I created the [**Nerd Herd Network**](https://www.nerdherd.network/){:target="_blank"}.
 
@@ -67,7 +66,6 @@ I've spent the past 2 years developing prototypes of first-person games. The cur
 I am running a (somewhat out of date) blog on the prototype at [**the Nerd Herd Network website**](https://www.nerdherd.network/castle-wars/).
 
 ### Notable features
-- Network-first game design
 - Extensive first-person character controller with many movement abilities including: dashing and sliding, flying, swimming, ability to change gravities, and walk on planets, climbing, and directed Movement (man cannons)
 - Local and networked split-screen
 - Steam integration and online multiplayer
