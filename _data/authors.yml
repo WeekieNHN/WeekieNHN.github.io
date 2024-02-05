@@ -2,7 +2,7 @@ Frank:
   name: "Frank Podraza"
   avatar: "/assets/images/frank-crop.png"
   bio: "Recent Computer Science Grad from the University of California, Santa Cruz. I make games. I am starting a careering in software and game development" # Note: Markdown is allowed
-  location: "California, United States"
+  location: "Santa Clara, CA, United States"
   links:
     - label: "Youtube"
       icon: "fab fa-youtube"
