@@ -52,9 +52,9 @@ pmbGallery:
 ## Bio
 
 ![image-right](/assets/images/frank.jpg){: .align-right height="50%" width="50%"}
-My Name is Frank Podraza, I go by Weekie on [**YouTube**](https://www.youtube.com/channel/UCqR1s3Jy4bRMN9c5XGLuLOQ){:target="_blank"}, [**Instagram**](https://www.instagram.com/weekie_nhn/){:target="_blank"}, [**Twitter**](https://twitter.com/Weekie_NHN){:target="_blank"}, and pretty much any social media I'm on. I created the [**Nerd Herd Network**](/about/){:target="_blank"}, I run the Nerd Herd YouTube Channel and this website.
+My Name is Frank Podraza, I also go by Weekie on [**YouTube**](https://www.youtube.com/channel/UCqR1s3Jy4bRMN9c5XGLuLOQ){:target="_blank"}, [**Instagram**](https://www.instagram.com/weekie_nhn/){:target="_blank"}, [**Twitter**](https://twitter.com/Weekie_NHN){:target="_blank"}, and pretty much any social media I'm on. I created the [**Nerd Herd Network**](/about/){:target="_blank"}.
 
-I like to make games. I developed [**Poke My Balls**](/projects/poke-my-balls/){:target="_blank"} back in 2016, the [**CSGO Prop**](/projects/csgo-prop/){:target="_blank"} in 2019, and I just released [**Launch My Dog**](/projects/launch-my-dog/){:target="_blank"} in July of 2021. I am a third-year student at the University of California Santa Cruz. I am studying computer science. I want to end up in the games industry, but I also really enjoy software engineering and systems programming.
+I make games. I developed [**Poke My Balls**](/projects/poke-my-balls/){:target="_blank"} back in 2016, the [**CSGO Prop**](/projects/csgo-prop/){:target="_blank"} in 2019, and I released [**Launch My Dog**](/projects/launch-my-dog/){:target="_blank"} in 2021. I recently graduated with honors from the University of California, Santa Cruz, with a bachelors in computer science. I am currently starting a career in software and game development.
 
 ## Launch My Dog
 
@@ -63,7 +63,7 @@ This project has been released and has an official landing page.
 [**Official Landing Page**](https://www.nerdherd.network/launch-my-dog/){: .btn .btn--info target="_blank" .align-center}
 
 ![image-left](/assets/images/LMD Icon.png){: .align-left height="45%" width="35%"}
-Launch My Dog is a game where you launch a hot dog into a bun. Things get in the way. I almost finished this game back in 2018, but felt that it wasn't fun enough to release. I came back to it early 2020 and slowly worked on it until it was complete. The goal was a tight small game that I can release on Mobile. There's some fun programming in here like projectile trajectory prediction, even through different mediums. I have learned a lot about optimization with this project. The original had all the levels loaded simultaneously, which was awfully slow. Now it loads each level additively as a scene, on top of a base scene, which is considerably faster. This performance boost allowed me to push other aspects of the game, like level complexity. Launch My Dog released on July 10th, 2021. It is available on both the iOS App Store and Google Play. I am currently working on extra levels and general quality of life improvements.
+Launch My Dog is a game where you launch a hot dog into a bun, but I put a bunch of obstacles in the way. I wanted to release this game back in 2018, but it wasn't up to my standards, it wasn't fun or polished enough to release. I restarted it early 2020 and slowly worked on it until it was complete. The goal was a tight small game that I can release on Mobile. There's some fun programming in here like projectile trajectory prediction, even through different mediums, and even portals. Launch My Dog released on July 10th, 2021. It is available on both the iOS App Store and Google Play.
 
 ### Screenshot Gallery
 {% include gallery id="lmdGallery" layout="half" %}
@@ -77,7 +77,7 @@ This project has been released and has an official landing page.
 [**Official Landing Page**](https://www.nerdherd.network/poke-my-balls/){: .btn .btn--info target="_blank" .align-center}
 
 ![image-right](/assets/images/PMB Icon.png){: .align-right height="30%" width="30%"}
-Poke My Balls started as a project called Tap2Kill. It's a simple game where different colored balls fall and you have to tap all of one color, but none of the other colors. My Father came up with the name one day and it stuck. I used this project as a way to start learning programming, and the Unity engine. I have come back to it over the years to implement concepts I have learned in university. Most recently, I used a class/subclass structure and polymorphism to make the game modes load as if they were game cartridges being put into a game console. There is one system that handles loading, and storing data (The "console"), and another that handles all the behaviors of the game (The "cartridge"). Poke My Balls released in August of 2016 and has been updated every once in a while since then.
+Poke My Balls started as a project called Tap2Kill. It's a simple game where different colored balls fall and you have to tap all of one color, but none of the other colors. My Father came up with the name one day and it stuck (for better or for worse). I used this project as a way to consolidate my programming abilities, and dive into the Unity engine. I have come back to it over the years to implement concepts I have learned in university, and in my own programming journey. Most recently, I used a class/subclass structure and polymorphism to make the game modes load as if they were game cartridges being put into a game console. There is one system that handles loading, and storing data (The "console"), and another that handles all the behaviors of the game (The "cartridge"). Poke My Balls released in August of 2016, and had its 2.0 update in summer of 2018.
 
 ### Screenshot Gallery
 {% include gallery id="pmbGallery" layout="half" %}
@@ -86,8 +86,7 @@ Poke My Balls started as a project called Tap2Kill. It's a simple game where dif
 
 ## CSGO Prop
 
-
-I wanted a way to play Counter Strike in real life with my friends. I decided to build a Raspberry Pi powered box with a touchscreen a speakers that would act as the C4 from the game. It originally ran a Unity application on the Windows 10 IOT platform. In desperate need of a speed-up I rewrote the entire project in python using the pygame library. I had wanted to learn python and this was an excellent outlet to do so. There is the defuse gamemode from Counter Strike, as well as King-of-the-Hill and Secure Area from Rainbow Six: Siege.
+I wanted a way to play Counter Strike in real life with my friends. I decided to build a Raspberry Pi powered box with a touchscreen and speakers that would act as the C4 from the game. I wrote the entire project in python using the pygame library. I had wanted to learn python and this was an excellent outlet to do so. There is the defuse gamemode from Counter Strike, as well as King-of-the-Hill and Secure Area from Rainbow Six: Siege.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/K_t29QqYVi8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
 
@@ -95,56 +94,38 @@ I wanted a way to play Counter Strike in real life with my friends. I decided to
 
 [**More Info**](/projects/csgo-prop/){:target="_blank" .btn .btn--info}
 
-## My Skills
+## The Near-future
 
-Since this is my portfolio, I wanted to list the skills I have acquired of the past 7 years of programming, video production, and game development.
+I've spent significant portions of my time the past 2 years developing prototypes of first-person games. I have worked on First-Person-Shooter prototypes in the past, but none came to fruition. The current prototype is under the moniker of "Castle Wars". Based on the Halo Reach gamemode of the same name. Castle Wars would be a simple networked multiplayer game where two teams fight over the control of the other's castles. It would be published on steam and be primary a PC game (though if it find success expansion to other platforms is on the table).
 
-### Skills/Programs
-- Adobe Creative Cloud Suite  
-  - Premiere Pro
-  - After Effects
-  - Photoshop
-  - Audition
-  - Media Encoder
-- The C Programming language
-- C#
-- C++
-- JavaScript
-- Java
-- Assembly Language/Machine code
-- Python
-- Shell programming
-- HTML/CSS
-- Unity game engine
-- Unreal Engine 4
-- The Microsoft Office Suite
-  - Word
-  - Excel
-  - PowerPoint
-- The Big 3 operating systems
-  - Windows
-  - MacOS
-  - Linux (Ubuntu, Debian, Arch)
-- Jekyll, Static site generation
-- The YouTube interface
-- OBS (Open Broadcasting System)
-- Development tools
-  - GitHub
-  - Trello
 
-## The Future
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=muBRuTV5VrMVnUed&amp;list=PLMQOp_clEoIvpAsdC6uXolmDoaQtEhrOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Now the Launch My Dog is complete, I want to start work on other projects. I no longer want to work on mobile games, and rather want to develop a PC game. I want to spend time honing my programming skills, and general project workflow. I have worked on First-Person-Shooter prototypes in the past, but none came to fruition. I also spent time on a possible parkour racing game in the Unreal Engine. If I had to make a short list of interests it would be this:
+---
 
-### Future Prospects
-- PC development
+### Notable features of the Castle Wars Prototype
+- Network-First game design
+- Extensive first-person character controller with many movement abilities
+  - Dashing and Sliding
+  - Flying
+  - Swimming
+  - Ability to change gravities, and walk on planets
+  - Climbing
+  - Directed Movement (man cannons)
+- Split-screen, and networked split-screen
+- Steam integration and online player
+- Lobbies for collecting players, setting up the game, and assigning teams
+- Autogenerating settings menu
+- Client-side predictive, server authenticated movement to prevent cheating
+
+### Future Prospects and Interests
+- PC game development
+- Engine programming
 - Networked Multiplayer Programming
 - User generated content though in-game means (i.e. a level editor)
 - Publishing on Steam
 - First-Person Game Design
 
-I will likely work next on a game with the running title of Castle Wars. Based on the Halo Reach gamemode of the same name. Castle Wars would be a simple networked multiplayer game where two fights over the control of the other's castles. It would be published on steam and be primary a PC game.
-
-### Follow Me
+### Follow Me on Socials
 
 <a href="https://www.youtube.com/channel/UCqR1s3Jy4bRMN9c5XGLuLOQ" class="btn btn--danger">Youtube</a> <a href="https://www.instagram.com/weekie_nhn/" class="btn btn--warning">Instagram</a> <a href="https://twitter.com/Weekie_NHN" class="btn btn--info">Twitter</a>

@@ -1,9 +1,6 @@
 main:
   - title: "Portfolio"
     url: /projects/
-    children:
-      - title: "Launch My Dog"
-      url: /projects/launch-my-dog/
   - title: "Contact"
     url: /contact/
 
