@@ -14,7 +14,7 @@ I have self-developed and published 2 mobile games and I'm currently developing 
 
 ## Castle Wars
 
-![castle-wars-game-right](/assets/images/castle-wars/0.0.1-demo.jpg){: .align-right height="30%" width="30%"}
+![castle-wars-game-right](/assets/images/castle-wars/0.0.1-demo.jpg){: .align-right height="50%" width="50%"}
 Castle Wars (Working Title) is a networked multiplayer first-person sword combat game.It is based on the Halo Reach gamemode of the same name. Castle Wars is a simple networked multiplayer game where two teams fight to control the other's castles. It will be published on Steam, and is primarily a PC game (though if it finds success, expansion to other platforms is on the table).
 
 
