@@ -34,9 +34,7 @@ Poke My Balls started as a project called Tap2Kill. It's a simple game where dif
 
 [**Check it out**](/projects/poke-my-balls/){: .btn .btn--info}
 
-# Physical Programming
-
-Physical Programming is what I am using as a catch-all term for projects that are more than just software. These projects have some physical component too.
+# Misc. Programming
 
 ## CSGO Prop
 
