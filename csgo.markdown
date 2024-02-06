@@ -9,7 +9,7 @@ share: true
 
 _By Frank "Weekie" Podraza_
 
-The program was originally a small phone project for me and a few friends to play in the park. The biggest issue was that I wanted to make the program run on a standalone device. I dreampt of a large group playing the game over a large area, and needing to use phones to communicate. Hastily, I put together a Raspberry Pi running Windows 10 IOT and wrote the project in Unity. It was what I was used to at the time. It was slow, but it worked. It could only be controlled from a separate laptop. Here's a video of that working.
+The program was originally a small phone project for me and a few friends to play in the park. The biggest issue was that I wanted to make the program run on a standalone device. I dreampt of a large group playing the game over a large area, and needing to use phones to communicate. Hastily, I put together a Raspberry Pi running Windows 10 IOT and wrote the project in Unity. It was what I was used to at the time. It was slow, but it worked. It could only be controlled from a separate laptop. Here's a video of that working:
 
 <iframe width="840" height="472" src="https://www.youtube.com/embed/Tl7xJwxCgCk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
 
