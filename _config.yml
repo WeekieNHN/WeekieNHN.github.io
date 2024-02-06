@@ -51,7 +51,7 @@ footer:
       url: "/contact/"
 
 favicon:
-  source: favicon.png
+  source: crop.jpg
   path: /assets/images/
 
 author:
