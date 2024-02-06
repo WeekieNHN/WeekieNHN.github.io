@@ -47,6 +47,24 @@ pmbGallery:
     image_path: /assets/images/poke-my-balls/screen-blue.PNG
     alt: "PMB Menu Blue"
     title: "Poke My Balls menu with blue background active"
+
+cwGallery:
+  - url: /assets/images/castle-wars/0.0.1-demo.jpg
+    image_path: /assets/images/castle-wars/0.0.1-demo.jpg
+    alt: "Castle Wars Multiplayer Render"
+    title: "Castle Wars Multiplayer Render"
+  - url: /assets/images/castle-wars/0.0.1-demo2.jpg
+    image_path: /assets/images/castle-wars/0.0.1-demo2.jpg
+    alt: "Castle Wars Training Ground map"
+    title: "Castle Wars Training Ground map"
+  - url: /assets/images/castle-wars/0.0.1-demo3.jpg
+    image_path: /assets/images/castle-wars/0.0.1-demo3.jpg
+    alt: "Castle Wars Multiplayer Lobby with Steam Icons"
+    title: "Castle Wars Multiplayer Lobby"
+  - url: /assets/images/castle-wars/0.0.1-demo4.jpg
+    image_path: /assets/images/castle-wars/0.0.1-demo4.jpg
+    alt: "Castle Wars auto-generated settings menu"
+    title: "Castle Wars auto-generated settings menu"
 ---
 
 ![image-right](/assets/images/frank-crop.png){: .align-right height="50%" width="50%"}
@@ -74,6 +92,7 @@ I am running a (somewhat out of date) blog on its development at [**the Nerd Her
 - Client-side predictive, server authenticated movement to prevent cheating
 
 ### Screenshot Gallery
+{% include gallery id="cwGallery" layout="half" %}
 
 ## Launch My Dog (2021)
 
