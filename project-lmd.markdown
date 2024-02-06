@@ -34,9 +34,6 @@ This project is released and has an official landing page.
 ![logo-right](/assets/images/LMD Icon.png){: .align-right height="30%" width="30%"}
 Launch My Dog is a physics-based puzzle game where you launch a hot dog into a bun, but I put a bunch of obstacles in the way. I wanted to release this game back in 2018, but it wasn't up to my standards, it wasn't fun or polished enough to release. The issues were with its core mechanic of launching. I restarted it early 2020 and slowly worked on it until it was complete. There's some fun programming in here like projectile trajectory prediction, even through different mediums, and even portals. Launch My Dog released on July 10th, 2021. It is available on both the iOS App Store and Google Play.
 
-## Screenshot Gallery
-{% include gallery layout="half" %}
-
 ## Development Process
 ![image-left](/assets/images/launch-my-dog/Feature Graphic.png){: .align-left height="45%" width="45%"}
 I Had the idea for Launch My Dog in the middle of the night a few months after the release of Poke My Balls. The concept was simple: Launch a hot dog into a hot dog bun. I started working the very next day.
@@ -77,3 +74,6 @@ After my spring finals in June of 2021, I had a few weeks of crunch, and a stres
 - Optimization is extremely important. Phones are getting more powerful, but that doesn't mean you can assume everyone has those phones.
 - Scope creep is a beast, and a planning document is one of the best was to combat it. You can easy cut the game down, but it's awfully hard to add more to it.
 - Band-Aid solutions accrue technical debt, and the plague of the work-around end up making a game unfun, and make working on the project a discouraging slog. You'll hate coming back to the project and re-learning all of the work-arounds. Doing more work upfront, and getting it right before moving on, saves more time in the long run. 
+
+## Screenshot Gallery
+{% include gallery layout="half" %}

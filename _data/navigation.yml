@@ -11,11 +11,13 @@ projects:
         url: /projects/
   - title: Games
     children:
+      - title: "Castle Wars"
+        url: /projects/castle-wars/
       - title: "Launch My Dog"
         url: /projects/launch-my-dog/
       - title: "Poke My Balls"
         url: /projects/poke-my-balls/
-  - title: Physical Programming
+  - title: Misc.
     children:
       - title: "CSGO Prop"
         url: /projects/csgo-prop/

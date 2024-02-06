@@ -34,9 +34,6 @@ This project is released and has an official landing page.
 ![logo-right](/assets/images/PMB Icon.png){: .align-right height="30%" width="30%"}
 Poke My Balls started as a project called Tap2Kill. It's a simple game where different colored balls fall and you have to tap all of one color, but none of the other colors. My Father came up with the name one day and it stuck (for better or for worse). I used this project as a way to consolidate my programming abilities, and dive into the Unity engine. I have come back to it over the years to implement concepts I have learned in university, and on my own. Most recently, I used a class/subclass structure and polymorphism to make the game modes load as if they were game cartridges being put into a game console. There is one system that handles loading, and storing data (The "console"), and another that handles all the behaviors of the game (The "cartridge"). Poke My Balls released in August of 2016, and had its 2.0 update in the Summer of 2018.
 
-## Screenshot Gallery
-{% include gallery layout="half" %}
-
 ## Development Process
 ![Screenshot-menu-left](/assets/images/poke-my-balls/screen-main.PNG){: .align-left height="30%" width="30%"}
 I started development on Poke My Balls in summer of 2016. I wanted to make the next Flappy Bird, and this game was an idea I had floating around in my head for about a year. I toyed with prototypes in Unity, and one in BuildBox (god, remember BuildBox? Exactly). I settled on Unity because BuildBox did not allow any upwards mobility when it comes to game scope or programming ability. Unity did. I started working and built most of the game in a couple days. I wrote the entire project in JavaScript, as that was all I knew at the time. I had only been programming for a year at this point. The game released on iOS on August 22nd, 2016, and a few weeks later on Android. I released a few updates in the following months, adding a colorblind mode, more settings, and fixing bugs.
