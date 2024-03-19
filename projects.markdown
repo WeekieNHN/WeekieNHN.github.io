@@ -22,14 +22,14 @@ Castle Wars (Working Title) is a networked multiplayer first-person sword combat
 
 ## Launch My Dog
 
-![logo-right](/assets/images/launch-my-dog/SE Screenshot 3.png){: .align-right height="45%" width="45%"}
+![logo-right](/assets/images/launch-my-dog/SE Screenshot 3.jpg){: .align-right height="45%" width="45%"}
 Launch My Dog is a physics-based puzzle game where you launch a hot dog into a bun, but I put a bunch of obstacles in the way. I wanted to release this game back in 2018, but it wasn't up to my standards, it wasn't fun or polished enough to release. The issues were with its core mechanic of launching. I restarted it in early 2020 and slowly worked on it until it was complete. There's some fun programming in here like projectile trajectory prediction, even through different mediums, and even portals. Launch My Dog was released on July 10th, 2021. It is available on both the iOS App Store and Google Play.
 
 [**Check it out**](/projects/launch-my-dog/){: .btn .btn--info}
 
 ## Poke My Balls
 
-![Screenshot-game-right](/assets/images/poke-my-balls/screen-game.PNG){: .align-right height="30%" width="30%"}
+![Screenshot-game-right](/assets/images/poke-my-balls/screen-game.jpg){: .align-right height="30%" width="30%"}
 Poke My Balls started as a project called Tap2Kill. It's a simple game where different colored balls fall and you have to tap all of one color, but none of the other colors. My Father came up with the name one day and it stuck (for better or for worse). I used this project as a way to consolidate my programming abilities and dive into the Unity engine. I have come back to it over the years to implement concepts I have learned in university, and on my own. Most recently, I used a class/subclass structure and polymorphism to make the game modes load as if they were game cartridges being put into a game console. There is one system that handles loading, and storing data (The "console"), and another that handles all the behaviors of the game (The "cartridge"). Poke My Balls was released in August of 2016, and had its 2.0 update in the Summer of 2018.
 
 [**Check it out**](/projects/poke-my-balls/){: .btn .btn--info}

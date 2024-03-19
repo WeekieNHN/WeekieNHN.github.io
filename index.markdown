@@ -13,38 +13,38 @@ toc_icon: "cog"
 toc_sticky: true
 
 lmdGallery:
-  - url: /assets/images/launch-my-dog/SE Screenshot 1.png
-    image_path: /assets/images/launch-my-dog/SE Screenshot 1.png
+  - url: /assets/images/launch-my-dog/SE Screenshot 1.jpg
+    image_path: /assets/images/launch-my-dog/SE Screenshot 1.jpg
     alt: "LMD Game"
     title: "Launch My Dog in-game"
-  - url: /assets/images/launch-my-dog/SE Screenshot 2.png
-    image_path: /assets/images/launch-my-dog/SE Screenshot 2.png
+  - url: /assets/images/launch-my-dog/SE Screenshot 2.jpg
+    image_path: /assets/images/launch-my-dog/SE Screenshot 2.jpg
     alt: "LMD Main Menu"
     title: "Launch My Dog main menu"
-  - url: /assets/images/launch-my-dog/SE Screenshot 3.png
-    image_path: /assets/images/launch-my-dog/SE Screenshot 3.png
+  - url: /assets/images/launch-my-dog/SE Screenshot 3.jpg
+    image_path: /assets/images/launch-my-dog/SE Screenshot 3.jpg
     alt: "LMD Toppings"
     title: "Launch My Dog in-game level 19"
-  - url: /assets/images/launch-my-dog/SE Screenshot 4.png
-    image_path: /assets/images/launch-my-dog/SE Screenshot 4.png
+  - url: /assets/images/launch-my-dog/SE Screenshot 4.jpg
+    image_path: /assets/images/launch-my-dog/SE Screenshot 4.jpg
     alt: "LMD Level 30"
     title: "Launch My Dog in-game level 30"
 
 pmbGallery:
-  - url: /assets/images/poke-my-balls/screen-main.PNG
-    image_path: /assets/images/poke-my-balls/screen-main.PNG
+  - url: /assets/images/poke-my-balls/screen-main.jpg
+    image_path: /assets/images/poke-my-balls/screen-main.jpg
     alt: "PMB Menu"
     title: "Poke My Balls menu"
-  - url: /assets/images/poke-my-balls/screen-game.PNG
-    image_path: /assets/images/poke-my-balls/screen-game.PNG
+  - url: /assets/images/poke-my-balls/screen-game.jpg
+    image_path: /assets/images/poke-my-balls/screen-game.jpg
     alt: "PMB Game"
     title: "Poke My Balls in-game"
-  - url: /assets/images/poke-my-balls/screen-shop.PNG
-    image_path: /assets/images/poke-my-balls/screen-shop.PNG
+  - url: /assets/images/poke-my-balls/screen-shop.jpg
+    image_path: /assets/images/poke-my-balls/screen-shop.jpg
     alt: "PMB Shop"
     title: "Poke My Balls shop"
-  - url: /assets/images/poke-my-balls/screen-blue.PNG
-    image_path: /assets/images/poke-my-balls/screen-blue.PNG
+  - url: /assets/images/poke-my-balls/screen-blue.jpg
+    image_path: /assets/images/poke-my-balls/screen-blue.jpg
     alt: "PMB Menu Blue"
     title: "Poke My Balls menu with blue background active"
 
@@ -67,7 +67,7 @@ cwGallery:
     title: "Castle Wars auto-generated settings menu"
 ---
 
-![image-right](/assets/images/frank-crop.png){: .align-right height="50%" width="50%"}
+![image-right](/assets/images/frank-crop.jpg){: .align-right height="50%" width="50%"}
 My name is Frank Podraza, I also go by Weekie on [**YouTube**](https://www.youtube.com/@weekie){:target="_blank"}, [**Instagram**](https://www.instagram.com/weekie_nhn/){:target="_blank"}, [**Twitter**](https://twitter.com/Weekie_NHN){:target="_blank"}, and pretty much any social media I'm on. I created the [**Nerd Herd Network**](https://www.nerdherd.network/){:target="_blank"}.
 
 I make games. I developed [**Poke My Balls**](/projects/poke-my-balls/){:target="_blank"} back in 2016, the [**CSGO Prop**](/projects/csgo-prop/){:target="_blank"} in 2019,  I released [**Launch My Dog**](/projects/launch-my-dog/){:target="_blank"} in 2021, and I am currently working on a first-person multiplayer game called [**Castle Wars**](/projects/castle-wars/){:target="_blank"} which will tentatively release in 2025. I recently graduated from the University of California, Santa Cruz, with a bachelor's in computer science. I am currently starting a career in software and game development.
@@ -100,7 +100,7 @@ This project has been released and has an official landing page.
 
 [**Official Landing Page**](https://www.nerdherd.network/launch-my-dog/){: .btn .btn--info target="_blank" .align-center}
 
-![image-left](/assets/images/LMD Icon.png){: .align-left height="45%" width="35%"}
+![image-left](/assets/images/LMD Icon.jpg){: .align-left height="45%" width="35%"}
 Launch My Dog is a physics-based puzzle game where you launch a hot dog into a bun, but I put a bunch of obstacles in the way. I wanted to release this game back in 2018, but it wasn't up to my standards, it wasn't fun or polished enough to release. The issues were with its core mechanic of launching. I restarted it in early 2020 and slowly worked on it until it was complete. There's some fun programming in here like projectile trajectory prediction, even through different mediums, and even portals. Launch My Dog was released on July 10th, 2021. It is available on both the iOS App Store and Google Play.
 
 ### Screenshot Gallery
