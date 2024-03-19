@@ -124,7 +124,7 @@ Poke My Balls started as a project called Tap2Kill. It's a simple game where dif
 
 ## CSGO Prop (2019)
 
-I wanted a way to play Counter-Strike in real life with my friends. I decided to build a Raspberry Pi-powered box with a touchscreen and speakers that would act as the C4 from the game. I wrote the entire project in Python using the Pygame library. I had wanted to learn P- ython and this was an excellent outlet to do so. There is the defuse game mode from Counter-Strike, as well as King-of-the-Hill and Secure Area from Rainbow Six: Siege.
+I wanted a way to play Counter-Strike in real life with my friends. I decided to build a Raspberry Pi-powered box with a touchscreen and speakers that would act as the C4 from the game. I wrote the entire project in Python using the Pygame library. I had wanted to learn Python and this was an excellent outlet to do so. There is the defuse game mode from Counter-Strike, as well as King-of-the-Hill and Secure Area from Rainbow Six: Siege.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/K_t29QqYVi8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
 
