@@ -1,6 +1,8 @@
 main:
   - title: "Portfolio"
     url: /projects/
+  - title: "Stream"
+    url: /live/
   - title: "Contact"
     url: /contact/
 
