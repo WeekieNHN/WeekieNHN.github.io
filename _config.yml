@@ -86,6 +86,11 @@ defaults:
       share: true
       related: true
 
+collections:
+  castle-wars:
+    output: true
+    permalink: /:collection/:path/
+
 # Build settings
 #theme: minimal-mistakes-jekyll
 remote_theme: mmistakes/minimal-mistakes
