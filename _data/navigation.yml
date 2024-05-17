@@ -1,6 +1,8 @@
 main:
   - title: "Portfolio"
     url: /projects/
+  - title: "Castle Wars"
+    url: /castle-wars/
   - title: "Stream"
     url: /live/
   - title: "Contact"
@@ -25,3 +27,54 @@ projects:
         url: /projects/csgo-prop/
       - title: "Web Development"
         url: /projects/web-dev/
+
+
+castle-wars-nav:
+  - title: "Quick Links"
+    children:
+      - title: "Main Page"
+        url: /castle-wars/
+      - title: "Mailing List"
+        url: /castle-wars/mail/ 
+  - title: "Early Development"
+    children:
+      - title: "Update 1: Basic Character Controller"
+        url: /castle-wars/sprint1/
+      - title: "Update 2: Basic Combat, Split Screen"
+        url: /castle-wars/sprint2/
+      - title: "Update 2.1: Settings System"
+        url: /castle-wars/sprint2/1/
+      - title: "Update 2.2: Enemies that Fight"
+        url: /castle-wars/sprint2/2/
+      - title: "Update 2.3: Combat Updates"
+        url: /castle-wars/sprint2/3/
+      - title: "Update 3: Steam Lobbies"
+        url: /castle-wars/sprint3/
+      - title: "Update 4: Restarting, Basic Multiplayer"
+        url: /castle-wars/sprint4/
+      - title: "Update 5: Lobby, Autogenerating Settings Menus"
+        url: /castle-wars/sprint5/
+      - title: "Update 6: Split Screen, Controller Support"
+        url: /castle-wars/sprint6/
+      - title: "Update 7: Advanced FPS Movement"
+        url: /castle-wars/sprint7/
+      - title: "Update 8: Planets, Portals, and more"
+        url: /castle-wars/sprint8/
+      - title: "Update 9: Health and Interaction"
+        url: /castle-wars/sprint9/
+      - title: "Update 10: Sword Combat Pt. 1"
+        url: /castle-wars/sprint10/
+      - title: "Update 11: Sword Combat Pt. 2"
+        url: /castle-wars/sprint11/
+  - title: "Mid Development"
+  - title: "Late Development"
+  - title: "Release"
+  - title: "Post Release"
+  - title: "Misc."
+    children:
+      - title: "Demo Map 1: Planet"
+        url: /castle-wars/planetmap/
+      - title: "Demo Map 2: Cruisers"
+        url: /castle-wars/cruisersmap/
+      - title: "Demo Map 3: Gravity Labs"
+        url: /castle-wars/gravitymap/
