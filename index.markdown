@@ -81,7 +81,7 @@ I've spent the past 2 years developing prototypes of first-person games. The cur
 
 ---
 
-I am running a (somewhat out of date) blog on its development at [**the Nerd Herd Network website**](https://www.nerdherd.network/castle-wars/){:target="_blank"}.
+I am running a (somewhat out of date) blog on its development [**here**](/castle-wars/){:target="_blank"}.
 
 ### Notable features
 - Extensive first-person character controller with many unique movement abilities
