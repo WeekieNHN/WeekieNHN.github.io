@@ -21,6 +21,10 @@ projects:
         url: /projects/launch-my-dog/
       - title: "Poke My Balls"
         url: /projects/poke-my-balls/
+  - title: Prototypes
+    children:
+      - title: "MetroidvaniASCII"
+        url: /projects/metroidvaniascii/
   - title: Misc.
     children:
       - title: "CSGO Prop"
