@@ -5,6 +5,7 @@ permalink: /projects/metroidvaniascii/
 sidebar:
   nav: "projects"
 share: true
+author: Frank
 
 gallery:
   - url: /assets/images/metroidvaniascii/title.png
