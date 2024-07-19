@@ -26,6 +26,7 @@ gallery:
     title: "View Swapper Pickup"
 ---
 
+_By Frank "Weekie" Podraza, Jul. 17, 2024_
 
 Video Embed
 ----
