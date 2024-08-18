@@ -1,0 +1,7 @@
+
+For Unity WebGL Builds going to Github Pages
+1. Make sure Favicon.ico in TemplateData folder is set correctly
+2. Change the title in index.html
+3. In Project Settings -> Publishing Settings make sure that 
+    - 'Decompression Fallback' is set to true
+    - 'Compression Format' is disabled
