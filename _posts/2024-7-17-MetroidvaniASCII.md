@@ -50,7 +50,3 @@ I wanted to use this as a project I finished. I would love to keep working on it
 
 ## Screenshot Gallery
 {% include gallery layout="half" %}
-
-
-Download Links:
-[**Windows (.zip)**](https://github.com/WeekieNHN/MetroidvaniASCII/tree/main/Zip){:target="_blank" .btn .btn--info .align-center}
