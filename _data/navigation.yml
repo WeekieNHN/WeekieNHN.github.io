@@ -74,7 +74,7 @@ castle-wars-nav:
         url: /castle-wars/sprint11/
       - title: "Update 12: Client-Side Prediction Pt. 1"
         url: /castle-wars/sprint12/
-        - title: "Update 13: Porting to Godot Pt. 1 - Groundwork"
+      - title: "Update 13: Porting to Godot Pt. 1 - Groundwork"
         url: /castle-wars/sprint13/
   - title: "Mid Development"
   - title: "Late Development"
