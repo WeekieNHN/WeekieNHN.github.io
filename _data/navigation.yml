@@ -25,7 +25,7 @@ projects:
     children:
       - title: "MetroidvaniASCII"
         url: /projects/metroidvaniascii/
-      - title: "MetroidvaniASCII"
+      - title: "Knockback Arena"
         url: /projects/knockback-arena/
   - title: Misc.
     children:

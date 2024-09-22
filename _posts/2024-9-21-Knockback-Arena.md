@@ -1,6 +1,6 @@
 ---
 layout: single
-title: MetroidvaniASCII
+title: Knockback Arena
 permalink: /projects/knockback-arena/
 sidebar:
   nav: "projects"
