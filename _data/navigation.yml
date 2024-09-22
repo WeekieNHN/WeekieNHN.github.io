@@ -25,6 +25,8 @@ projects:
     children:
       - title: "MetroidvaniASCII"
         url: /projects/metroidvaniascii/
+      - title: "MetroidvaniASCII"
+        url: /projects/knockback-arena/
   - title: Misc.
     children:
       - title: "CSGO Prop"
