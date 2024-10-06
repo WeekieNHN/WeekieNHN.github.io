@@ -50,6 +50,7 @@ Of course, none of the traps work without enemies to lure into them. Last update
 
 Here's the video for this update:
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dwpOKPVbSHQ?si=yX2mHB3eFZUH6rwh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ---
 
  That's it for now, check back soon for further updates. :)
