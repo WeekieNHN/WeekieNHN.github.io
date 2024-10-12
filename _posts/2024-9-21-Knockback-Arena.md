@@ -25,7 +25,7 @@ This was all to keep myself from going crazy, and also to keep the amount of wor
 
 # Shop & Drop Zone
 
-![Shop-Left](/assets/images/knockback-arena/shop_Gif_Small.gif){: .align-left height="30%" width="30%"}
+![Shop-Left](/assets/images/knockback-arena/Shop_Gif_Small.gif){: .align-left height="30%" width="30%"}
 
 ![Parachute-Right](/assets/images/knockback-arena/Parachute_Gif_Small.gif){: .align-right height="30%" width="30%"}
 
@@ -50,9 +50,11 @@ Originally I wanted Traps to be hazards laid throughout the map. There's a lava 
 
 The lava pit is still an environmental hazard, but the spikes, tripwire, and decoy are placeable. There is a preview whil you're holding one to show where it'll be placed.
 
+![Spikes-Left](/assets/images/knockback-arena/Spikes_Gif_Large.gif){: .align-left height="30%" width="30%"}
 The Spikes wait until enemies are walking atop them, and then will trigger the spikes. There is a delay to let more enemies gather on top of the trap. The spikes currently appear to just kill the enemies, but I've implemented a hit system. Each entity with a health component can take a set number of hits before they die. Basic enemies take one. The spikes emit 1 hit, thus will kill any basic enemies. Other enemies will be able to take multiple. And the decoy can take multiple.
 
-The tripwire is a basic trap. When enemies overlap with a tripwire trigger, 3 claymores explode and push them back. It also pushes the player if the player is in the way. I love this thing.
+![Tripwire-Right](/assets/images/knockback-arena/Tripwire_Gif_Small.gif){: .align-right height="30%" width="30%"}
+The tripwire is a basic trap. When enemies overlap with a tripwire trigger, 3 claymores explode and push them back. It also pushes the player if the player is in the way. I love this thing. It has a very meaty sound effect that plays, and it just feels nice to bully the enemies.
 
 Decoys are more complex, they do not do damage or knock enemies back, but they do act as a target. Players can use these to get some recooperation time, or to lure enemies into other traps like spikes or a tripwire. This is that "chaining" or "stacking" effect I mentioned earlier.
 
