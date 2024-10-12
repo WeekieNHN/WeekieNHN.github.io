@@ -34,7 +34,7 @@ I don't think that words are going to do any of it justice, so I suggest you wat
 
 
 
- # Traps
+# Traps
 
 Originally I wanted Traps to be hazards laid throughout the map. There's a lava pit in the center that the player can activate, and I had planned for there to be spikes, tripwire, and decoys in the 4 "corners" of the map (The 4 points where enemies can spawn). I realized at some point that it'd be much more fun to be able to choose where the traps we're. That way players could choose to "stack" traps, and chain their effects together.
 
