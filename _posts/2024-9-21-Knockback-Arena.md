@@ -27,6 +27,14 @@ I upend up Unity and made 1 map, 1 player controller, and set up split screen to
 This was all to keep myself from going crazy, and also to keep the amount of work manageable. 
 
 # Arena
+![Shop-Right](/assets/images/knockback-arena/Arena_Gif_Small.gif){: .align-right height="30%" width="30%"}
+The arena is pretty simple. It is an octogon which has a smaller octogon in the center. There is a shop zone and a drop zone. The arena is surround by a lava moat. Falling into the lava will cause the player, or anything that falls into it, to die. On the other side of the lava are some empty bleachers, and some walls which slowly move around the arena, just to make the background visuals a bit more dynamic.
+
+There is a scoreboard on one end of the arena, where players can see stats on what round their on, round types, payout amounts, and how much money each player has.
+
+Lastly there is a secret room underneath the arena where dead players can reside when playing split screen. This way they have something to do/watch while they wait to be revived.
+
+I hope that I can spend some time world-building, I have some ideas given the empty bleachers, and the dead room, but at time of writing I don't plan on expanding the "lore" of the world.
 
 # Shop & Drop Zone
 
@@ -39,10 +47,9 @@ When a player buys an item from the shop (with the exception of the lava pit, yo
 Each parachute spawns in with an item, and will slowly makes it way to the ground. When the parachute reaches the ground it will drop it's item and disappear. The player can pick up the item as soon as it's within interaction range.
 
 # Weapons
-
+![Rifle-Right](/assets/images/knockback-arena/Rifle_Gif_Small.gif){: .align-right height="30%" width="30%"}
 The first bit of work I did consisted of getting the player character working, split screen set up, and building out a basic interation and inventory system. I then built a shop from which players can buy items. The first set of items I wanted to build were weapons. I'm an FPS kid at heart, so I really like making shooters.
 
-![Rifle-Right](/assets/images/knockback-arena/Rifle_Gif_Small.gif){: .align-right height="30%" width="30%"}
 I added a pistol, a rifle, a shotgun, and rocket launcher (blame my Halo roots for both it's implementation, and visual). I got models from Kenney Assets and I animated pickup and fire animations for each one. I got sound effects from Open Game Art, and overall the weapons feel pretty nice to use. They each do their own amount of knockback when you hit enemies. They also have their own crosshairs (also from Kenney Assets).
 
 I don't think that words are going to do them enough justice, so I suggest you watch this video:
@@ -50,10 +57,7 @@ I don't think that words are going to do them enough justice, so I suggest you w
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nNGxyOnwXAU?si=E6aJ06PhssqzKYuc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ---
 
-
-
 # Traps
-
 Originally I wanted Traps to be hazards laid throughout the map. There's a lava pit in the center that the player can activate, and I had planned for there to be spikes, tripwire, and decoys in the 4 "corners" of the map (The 4 points where enemies can spawn). I realized at some point that it'd be much more fun to be able to choose where the traps we're. That way players could choose to "stack" traps, and chain their effects together.
 
 ## The Lava Pit
@@ -68,7 +72,10 @@ The Spikes wait until enemies are walking atop them, and then will trigger the s
 ![Tripwire-Right](/assets/images/knockback-arena/Tripwire_Gif_Small.gif){: .align-right height="30%" width="30%"}
 The tripwire is a basic trap. When enemies overlap with a tripwire trigger, 3 claymores explode and push them back. It also pushes the player if the player is in the way. I love this thing. It has a very meaty sound effect that plays, and it just feels nice to bully the enemies.
 
+Tripwires work best when paired with a decoy, which we'll talk about in a second. This way enemies almost blindly walk into the tripwire. This knocks enemies back and also gives the players a chances to breathe.
+
 ## Decoys
+![Decoy-Left](/assets/images/knockback-arena/Decoy_Gif_Small.gif){: .align-left height="30%" width="30%"}
 Decoys are more complex, they do not do damage or knock enemies back, but they do act as a target. Players can use these to get some recooperation time, or to lure enemies into other traps like spikes or a tripwire. This is that "chaining" or "stacking" effect I mentioned earlier.
 
 Of course, none of the traps work without enemies to lure into them. Last update the enemies would spawn in, but we're static beyond that. I add basic horizontal movement and the ability to attack players (and decoys) directly in front of them. There is no navigation, so enemies will blindly walk into the lava if you are across it. I'll be updating this in a later update.
