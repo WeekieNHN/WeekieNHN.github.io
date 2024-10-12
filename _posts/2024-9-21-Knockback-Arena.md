@@ -52,7 +52,8 @@ The first bit of work I did consisted of getting the player character working, s
 
 I added a pistol, a rifle, a shotgun, and rocket launcher (blame my Halo roots for both it's implementation, and visual). I got models from Kenney Assets and I animated pickup and fire animations for each one. I got sound effects from Open Game Art, and overall the weapons feel pretty nice to use. They each do their own amount of knockback when you hit enemies. They also have their own crosshairs (also from Kenney Assets).
 
-I don't think that words are going to do them enough justice, so I suggest you watch this video:
+## Devlog
+I don't think that words are going to this enough justice, so I suggest you watch the video I made for it:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nNGxyOnwXAU?si=E6aJ06PhssqzKYuc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ---
@@ -61,11 +62,12 @@ I don't think that words are going to do them enough justice, so I suggest you w
 Originally I wanted Traps to be hazards laid throughout the map. There's a lava pit in the center that the player can activate, and I had planned for there to be spikes, tripwire, and decoys in the 4 "corners" of the map (The 4 points where enemies can spawn). I realized at some point that it'd be much more fun to be able to choose where the traps we're. That way players could choose to "stack" traps, and chain their effects together.
 
 ## The Lava Pit
+![Lava-Pit-Right](/assets/images/knockback-arena/Lava_Pit_Gif_Small.gif{: .align-right height="30%" width="30%"}
 The lava pit is still an environmental hazard, but the spikes, tripwire, and decoy are placeable. There is a preview whil you're holding one to show where it'll be placed.
 
 
 ## Spikes
-![Spikes-Left](/assets/images/knockback-arena/Spikes_Gif_Large.gif){: .align-left height="30%" width="30%"}
+![Spikes-Left](/assets/images/knockback-arena/Spikes_Gif_Small.gif){: .align-left height="30%" width="30%"}
 The Spikes wait until enemies are walking atop them, and then will trigger the spikes. There is a delay to let more enemies gather on top of the trap. The spikes currently appear to just kill the enemies, but I've implemented a hit system. Each entity with a health component can take a set number of hits before they die. Basic enemies take one. The spikes emit 1 hit, thus will kill any basic enemies. Other enemies will be able to take multiple. And the decoy can take multiple.
 
 ## Tripwires w/ Claymores
@@ -80,12 +82,17 @@ Decoys are more complex, they do not do damage or knock enemies back, but they d
 
 Of course, none of the traps work without enemies to lure into them. Last update the enemies would spawn in, but we're static beyond that. I add basic horizontal movement and the ability to attack players (and decoys) directly in front of them. There is no navigation, so enemies will blindly walk into the lava if you are across it. I'll be updating this in a later update.
 
+## Devlog
 Here's the video for this update:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dwpOKPVbSHQ?si=yX2mHB3eFZUH6rwh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ---
 
 # Grenades (Throwables)
+
+
+## Devlog
+Here's the video for this update:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ecjw-bEwJr0?si=0piR4N5P1jZyGWMb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ---
