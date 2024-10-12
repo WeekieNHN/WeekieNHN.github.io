@@ -17,7 +17,7 @@ toc_sticky: true
 
 A while back I watched a [Miziziziz Video](https://youtu.be/5-iST0a69cI?si=3U4mzQ9sm-osOv-Z&t=189) which suggested the idea of making an arena shooter where bullets don't do damage, but instead knock enemies back. I was in the throws of debugging some network troubles I was having with [Castle Wars](/projects/castle-wars/) so I decided to give it a stab.
 
-I upend up Unity and made 1 map, 1 player controller, and set up split screen to allow up to 4 players play split-screen in the arena. To prevent some scoping issues I instituted what I called a "rule of 4" meaning that anything I add there can only be 4 of. Examples include:
+I opened up Unity and made 1 map, 1 player controller, and set up split screen to allow up to 4 players play split-screen in the arena. To prevent some scoping issues I instituted what I called a "rule of 4" meaning that anything I add there can only be 4 of. Examples include:
 - 4 weapons
 - 4 grenades
 - 4 traps
@@ -62,7 +62,7 @@ I don't think that words are going to this enough justice, so I suggest you watc
 Originally I wanted Traps to be hazards laid throughout the map. There's a lava pit in the center that the player can activate, and I had planned for there to be spikes, tripwire, and decoys in the 4 "corners" of the map (The 4 points where enemies can spawn). I realized at some point that it'd be much more fun to be able to choose where the traps we're. That way players could choose to "stack" traps, and chain their effects together.
 
 ## The Lava Pit
-![Lava-Pit-Right](/assets/images/knockback-arena/Lava_Pit_Gif_Small.gif{: .align-right height="30%" width="30%"}
+![Lava-Pit-Right](/assets/images/knockback-arena/Lava_Pit_Gif_Small.gif){: .align-right height="30%" width="30%"}
 The lava pit is still an environmental hazard, but the spikes, tripwire, and decoy are placeable. There is a preview whil you're holding one to show where it'll be placed.
 
 
