@@ -21,10 +21,20 @@ I'd make 1 map, 1 player controller, and let up to 4 players play split-screen i
 
 This was all to keep myself from going crazy, and also to keep the amount of work manageable. 
 
+# Arena
+
+# Shop & Drop Zone
+
+![Shop-Left](/assets/images/knockback-arena/shop_Gif_Small.gif){: .align-left height="30%" width="30%"}
+
+![Parachute-Right](/assets/images/knockback-arena/Parachute_Gif_Small.gif){: .align-right height="30%" width="30%"}
+
+
 # Weapons
 
 The first bit of work I did consisted of getting the player character working, split screen set up, and building out a basic interation and inventory system. I then built a shop from which players can buy items. The first set of items I wanted to build were weapons. I'm an FPS kid at heart, so I really like making shooters.
 
+![Rifle-Right](/assets/images/knockback-arena/Rifle_Gif_Small.gif){: .align-right height="30%" width="30%"}
 I added a pistol, a rifle, a shotgun, and rocket launcher (blame my Halo roots for this). I got models from Kenney Assets and I animated pickup and fire animations for each one.
 
 I don't think that words are going to do any of it justice, so I suggest you watch this video:
