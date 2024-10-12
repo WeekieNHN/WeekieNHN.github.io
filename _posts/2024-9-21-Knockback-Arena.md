@@ -17,7 +17,7 @@ toc_sticky: true
 
 A while back I watched a [Miziziziz Video](https://youtu.be/5-iST0a69cI?si=3U4mzQ9sm-osOv-Z&t=189) which suggested the idea of making an arena shooter where bullets don't do damage, but instead knock enemies back. I was in the throws of debugging some network troubles I was having with [Castle Wars](/projects/castle-wars/) so I decided to give it a stab.
 
-I'd make 1 map, 1 player controller, and let up to 4 players play split-screen in an arena shooter. Likewise, to prevent some scoping issues. I instituted what I called a "rule of 4" meaning that anything I add there can only be 4 of. Examples include
+I upend up Unity and made 1 map, 1 player controller, and set up split screen to allow up to 4 players play split-screen in the arena. To prevent some scoping issues I instituted what I called a "rule of 4" meaning that anything I add there can only be 4 of. Examples include:
 - 4 weapons
 - 4 grenades
 - 4 traps
@@ -31,18 +31,21 @@ This was all to keep myself from going crazy, and also to keep the amount of wor
 # Shop & Drop Zone
 
 ![Shop-Left](/assets/images/knockback-arena/Shop_Gif_Small.gif){: .align-left height="30%" width="30%"}
+Obviously the players are going to need some method of obtaining the weapons, traps, and grenades they'll need to fight the waves of enemies. The shop automatically comes out of the ground when the game starts, and it will appear every time a round ends. The shop is not available during rounds. There's buttons for weapons, throwables (grenades), traps, revives, and a button to start the next round.
 
 ![Parachute-Right](/assets/images/knockback-arena/Parachute_Gif_Small.gif){: .align-right height="30%" width="30%"}
+When a player buys an item from the shop (with the exception of the lava pit, you'll understand why later) a parachute spawns on the other end of the arena. The other end of the area is the drop zone. The drop is where you'll recieve items, as well as where players spawn in and drop down.
 
+Each parachute spawns in with an item, and will slowly makes it way to the ground. When the parachute reaches the ground it will drop it's item and disappear. The player can pick up the item as soon as it's within interaction range.
 
 # Weapons
 
 The first bit of work I did consisted of getting the player character working, split screen set up, and building out a basic interation and inventory system. I then built a shop from which players can buy items. The first set of items I wanted to build were weapons. I'm an FPS kid at heart, so I really like making shooters.
 
 ![Rifle-Right](/assets/images/knockback-arena/Rifle_Gif_Small.gif){: .align-right height="30%" width="30%"}
-I added a pistol, a rifle, a shotgun, and rocket launcher (blame my Halo roots for this). I got models from Kenney Assets and I animated pickup and fire animations for each one.
+I added a pistol, a rifle, a shotgun, and rocket launcher (blame my Halo roots for both it's implementation, and visual). I got models from Kenney Assets and I animated pickup and fire animations for each one. I got sound effects from Open Game Art, and overall the weapons feel pretty nice to use. They each do their own amount of knockback when you hit enemies. They also have their own crosshairs (also from Kenney Assets).
 
-I don't think that words are going to do any of it justice, so I suggest you watch this video:
+I don't think that words are going to do them enough justice, so I suggest you watch this video:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nNGxyOnwXAU?si=E6aJ06PhssqzKYuc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ---
