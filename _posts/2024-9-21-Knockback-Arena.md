@@ -28,7 +28,7 @@ This was all to keep myself from going crazy, and also to keep the amount of wor
 
 # Arena
 ![Shop-Right](/assets/images/knockback-arena/Arena_Gif_Small.gif){: .align-right height="30%" width="30%"}
-The arena is pretty simple. It is an octogon which has a smaller octogon in the center. There is a shop zone and a drop zone. The arena is surround by a lava moat. Falling into the lava will cause the player, or anything that falls into it, to die. On the other side of the lava are some empty bleachers, and some walls which slowly move around the arena, just to make the background visuals a bit more dynamic.
+The arena is pretty simple. It is an octagon which has a smaller octagon in the center. There is a shop zone and a drop zone. The arena is surround by a lava moat. Falling into the lava will cause the player, or anything that falls into it, to die. On the other side of the lava are some empty bleachers, and some walls which slowly move around the arena, just to make the background visuals a bit more dynamic.
 
 There is a scoreboard on one end of the arena, where players can see stats on what round their on, round types, payout amounts, and how much money each player has.
 
@@ -42,15 +42,15 @@ I hope that I can spend some time world-building, I have some ideas given the em
 Obviously the players are going to need some method of obtaining the weapons, traps, and grenades they'll need to fight the waves of enemies. The shop automatically comes out of the ground when the game starts, and it will appear every time a round ends. The shop is not available during rounds. There's buttons for weapons, throwables (grenades), traps, revives, and a button to start the next round.
 
 ![Parachute-Right](/assets/images/knockback-arena/Parachute_Gif_Small.gif){: .align-right height="30%" width="30%"}
-When a player buys an item from the shop (with the exception of the lava pit, you'll understand why later) a parachute spawns on the other end of the arena. The other end of the area is the drop zone. The drop is where you'll recieve items, as well as where players spawn in and drop down.
+When a player buys an item from the shop (with the exception of the lava pit, you'll understand why later) a parachute spawns on the other end of the arena. The other end of the area is the drop zone. The drop is where you'll receive items, as well as where players spawn in and drop down.
 
 Each parachute spawns in with an item, and will slowly makes it way to the ground. When the parachute reaches the ground it will drop it's item and disappear. The player can pick up the item as soon as it's within interaction range.
 
 # Weapons
 ![Rifle-Right](/assets/images/knockback-arena/Rifle_Gif_Small.gif){: .align-right height="30%" width="30%"}
-The first bit of work I did consisted of getting the player character working, split screen set up, and building out a basic interation and inventory system. I then built a shop from which players can buy items. The first set of items I wanted to build were weapons. I'm an FPS kid at heart, so I really like making shooters.
+The first bit of work I did consisted of getting the player character working, split screen set up, and building out a basic interaction and inventory system. I then built a shop from which players can buy items. The first set of items I wanted to build were weapons. I'm an FPS kid at heart, so I really like making shooters.
 
-I added a pistol, a rifle, a shotgun, and rocket launcher (blame my Halo roots for both it's implementation, and visual). I got models from Kenney Assets and I animated pickup and fire animations for each one. I got sound effects from Open Game Art, and overall the weapons feel pretty nice to use. They each do their own amount of knockback when you hit enemies. They also have their own crosshairs (also from Kenney Assets).
+I added a pistol, a rifle, a shotgun, and rocket launcher (blame my Halo roots for both it's implementation, and visual). I got models from Kenney Assets and I animated pickup and fire animations for each one. I got sound effects from Open Game Art, and overall the weapons feel pretty nice to use. They each do their own amount of knockback when you hit enemies. They each also have their own crosshair (also from Kenney Assets).
 
 ## Devlog
 I don't think that words are going to this enough justice, so I suggest you watch the video I made for it:
@@ -80,7 +80,7 @@ Tripwires work best when paired with a decoy, which we'll talk about in a second
 
 ## Decoys
 ![Decoy-Left](/assets/images/knockback-arena/Decoy_Gif_Small.gif){: .align-left height="30%" width="30%"}
-Decoys are more complex, they do not do damage or knock enemies back, but they do act as a target. Players can use these to get some recooperation time, or to lure enemies into other traps like spikes or a tripwire. This is that "chaining" or "stacking" effect I mentioned earlier.
+Decoys are more complex, they do not do damage or knock enemies back, but they do act as a target. Players can use these to get some recuperation time, or to lure enemies into other traps like spikes or a tripwire. This is that "chaining" or "stacking" effect I mentioned earlier.
 
 Of course, none of the traps work without enemies to lure into them. Last update the enemies would spawn in, but we're static beyond that. I add basic horizontal movement and the ability to attack players (and decoys) directly in front of them. There is no navigation, so enemies will blindly walk into the lava if you are across it. I'll be updating this in a later update.
 
@@ -94,19 +94,21 @@ Here's the video for this update:
 
 ## Normal Grenade
 ![Grenade-Left](/assets/images/knockback-arena/Grenade_Gif_Small.gif){: .align-left height="30%" width="30%"}
-
+The normal grenade is a basic throwable. You can pick it up, aim it. There's a preview for all throwable objects to indicate the arc at which they'll be thrown. When you throw the grenade it will bounce for a bit, and then explode. I toyed around with this grenade sticking to walls and/or exploding on impact, but all the other grenades explode on impact, so I left it as a time based explosion.
 
 ## Nuke
 ![Nuke-Right](/assets/images/knockback-arena/Nuke_Gif_Small.gif){: .align-right height="30%" width="30%"}
+The nuke is basically a grenade on steroids. It has an insane amount of knockback and explodes on impact. I has a beefy sound effect, a lot of particles, but you may notice one thing missing: There's no mushroom cloud. I would love to have a mushroom cloud here but I do not know how to make one that a) looks good, and b) is performant. I've seen plenty of examples of mushroom clouds made in Unity but they all are isolated. The scene is nothing but a mushroom cloud. I feel like it might weigh to much on performance in the realtime shooter environment. However, if I can figure out a solution I will implement it in a heartbeat.
 
 
 ## Black Hole
 ![Black-Hole-Left](/assets/images/knockback-arena/Black_Hole_Gif_Small.gif){: .align-left height="30%" width="30%"}
+Okay the black hole is kind of nuts. It is in no way physically accurate. You can pick one up for christ's sake. I got the shader from this [YouTube Video](https://www.youtube.com/watch?v=SWJZcQvTmnw). The black hole has open and close animations. While it is active in the field it pulls enemies in and shoots them out in random directions. The player is not affected by these physics because I am simply to lazy to integrate the physics into the player's movement code. I am also of the opinion that mechanics that seemingly remove control from the player (like when they'd be pulled in to the black hole) don't feel to play, and there's not a clear indication of where the pulling would start.
 
 
 ## Ice Grenade
 ![Ice-Grenade-Right](/assets/images/knockback-arena/Ice_Grenade_Gif_Small.gif){: .align-right height="30%" width="30%"}
-
+The last grenade I added is an ice grenade! It's pretty simple, you throw it at enemies and they freeze for a little bit. I got the shader from [this YouTube video](https://www.youtube.com/watch?v=inht8WYX-A4), and it works great! I especially like the refraction you can see through the ice. Paired that with some ice spell and shatter sound effects and it feels good.
 
 ## Devlog
 Here's the video for this update:
