@@ -110,8 +110,16 @@ Okay the black hole is kind of nuts. It is in no way physically accurate. You ca
 ![Ice-Grenade-Right](/assets/images/knockback-arena/Ice_Grenade_Gif_Small.gif){: .align-right height="30%" width="30%"}
 The last grenade I added is an ice grenade! It's pretty simple, you throw it at enemies and they freeze for a little bit. I got the shader from [this YouTube video](https://www.youtube.com/watch?v=inht8WYX-A4), and it works great! I especially like the refraction you can see through the ice. Paired that with some ice spell and shatter sound effects and it feels good.
 
+I'll have to make the enemy's frozen effect more convincing at some point, but that'll happen when the enemies get an overhaul!
+
 ## Devlog
 Here's the video for this update:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ecjw-bEwJr0?si=0piR4N5P1jZyGWMb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ---
+
+# Enemies
+
+# The Boss & "Release"
+
+# Related Content
