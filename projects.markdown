@@ -45,7 +45,7 @@ MetroidvaniASCII is a metroidvania where to player gains the ability to see the 
 
 ## Knockback Arena
 
-![KBA-Right](/assets/images/knockback-arena/Arena_Gif_Small.gif){: .align-right height="15%" width="15%"}
+![KBA-Right](/assets/images/knockback-arena/Arena_Gif_Small.gif){: .align-right height="20%" width="20%"}
 I set out to make a first-person shooter where weapons don't do damage, they knock enemies back. I built an arena shooter in which up to 4 players can fight waves of enemies with guns, grenades, and traps. This was a blast to make.
 
 [**Check it out**](/projects/knockback-arena/){: .btn .btn--info}
