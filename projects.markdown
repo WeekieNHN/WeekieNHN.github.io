@@ -34,6 +34,20 @@ Poke My Balls started as a project called Tap2Kill. It's a simple game where dif
 
 [**Check it out**](/projects/poke-my-balls/){: .btn .btn--info}
 
+# Prototypes
+
+## MetroidvaniASCII
+
+MetroidvaniASCII is a metroidvania where to player gains the ability to see the world through different "views". Objects appear or disappear when the player swaps between normal and ASCII views. I was able to make some interesting puzzle and platforming sections.
+
+[**Check it out**](/projects/metroidvaniascii/){: .btn .btn--info}
+
+## Knockback Arena
+
+I set out to make a first-person shooter where weapons don't do damage, they knock enemies back. I built an arena shooter in which up to 4 players can fight waves of enemies with guns, grenades, and traps. This was a blast to make.
+
+[**Check it out**](/projects/knockback-arena/){: .btn .btn--info}
+
 # Misc. Programming
 
 ## CSGO Prop
