@@ -38,7 +38,6 @@ footer:
     - label: "Patreon"
       url: "https://www.patreon.com/Weekie"
     - label: "BlueSky"
-      icon: "fab fa-fw fa-twitter-square"
       url: "https://bsky.app/profile/weekie.bsky.social"
       label: "Instagram"
       icon: "fab fa-fw fa-instagram"
