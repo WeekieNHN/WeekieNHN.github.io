@@ -131,12 +131,3 @@ I wanted a way to play Counter-Strike in real life with my friends. I decided to
 ----
 
 [**More Info**](/projects/csgo-prop/){:target="_blank" .btn .btn--info}
-
-## Future Interests
-- PC game development
-- Cross-platform engine development
-- Networked multiplayer programming
-- User-generated content through in-game means (i.e. a level editor)
-- User-generated content through outside-of-game means (i.e. mod support)
-- Publishing on Steam
-- First-person game design
