@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Launch My Dog is out now on iOS and Google Play. I am a Computer Science student
   at the University of California, Santa Cruz, I run this website,
   and the Nerd Herd Network
-# baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.frankpodraza.net" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Weekie_NHN
 github_username:  WeekieNHN
