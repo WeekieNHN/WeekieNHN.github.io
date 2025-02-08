@@ -27,6 +27,8 @@ projects:
         url: /projects/metroidvaniascii/
       - title: "Knockback Arena"
         url: /projects/knockback-arena/
+      - title: "Clone Jitsu"
+        url: /projects/clone-jitsu/
   - title: Misc.
     children:
       - title: "CSGO Prop"
