@@ -6,43 +6,42 @@ import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
-    integrations: [starlight({
-        title: 'Weekiepedia',
-        social: [
-            { icon: 'youtube', label: 'YouTube', href: 'https://www.youtube.com/@weekie' },
-            { icon: 'patreon', label: 'Patreon', href: 'https://www.patreon.com/Weekie/' },
-            { icon: 'twitter', label: 'BlueSky', href: 'https://bsky.app/profile/weekiepedia.org' },
-            { icon: 'github', label: 'GitHub', href: 'https://github.com/WeekieNHN' },
+  integrations: [starlight({
+    title: 'Weekiepedia',
+    social: [
+      { icon: 'youtube', label: 'YouTube', href: 'https://www.youtube.com/@weekie' },
+      { icon: 'patreon', label: 'Patreon', href: 'https://www.patreon.com/Weekie/' },
+      { icon: 'twitter', label: 'BlueSky', href: 'https://bsky.app/profile/weekiepedia.org' },
+      { icon: 'github', label: 'GitHub', href: 'https://github.com/WeekieNHN' },
+    ],
+    sidebar: [
+      {
+        label: 'Guides',
+        items: [
+          { label: 'Example Guide', slug: 'guides/example' },
         ],
-        sidebar: [
-            {
-                label: 'Guides',
-                items: [
-                    // Each item here is one entry in the navigation menu.
-                    { label: 'Example Guide', slug: 'guides/example' },
-                ],
-            },
-            {
-                label: 'Reference',
-                items: [{ autogenerate: { directory: 'reference' } }],
-            },
+      },
+      {
+        label: 'Reference',
+        items: [{ autogenerate: { directory: 'reference' } }],
+      },
+    ],
+	components: {
+      Header: './src/components/SiteHeader.astro',
+    },
+    plugins: [
+      starlightThemeBlack({
+        navLinks: [
+          { label: 'Games', link: '/games/' },
+          { label: 'Docs', link: '/getting-started' },
+          { label: 'Stream', link: '' },
+          { label: 'About', link: '/about' },
+          { label: 'Contact', link: '' },
         ],
-        plugins: [
-            starlightThemeBlack({
-			// Navigation Bar at the top
-            navLinks: [
-                { label: 'Games', link: '' },
-                { label: 'Docs', link: '/getting-started'},
-                { label: 'Stream', link: '' },
-                { label: 'About', link: '/about' },
-                { label: 'Contact', link: '' },
-            ],
-			// Turn off page-copy and AI Agent tie-in 
-			// Globally
-			docs: {
-				showMarkdownActions: false
-				}
-            })
-        ],
-		}), mdx()],
+        docs: {
+          showMarkdownActions: false
+        }
+      })
+    ],
+  }), mdx()],
 });
