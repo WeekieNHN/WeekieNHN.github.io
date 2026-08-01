@@ -1,0 +1,221 @@
+---
+interface Props {
+  variant?: 'desktop' | 'mobile';
+}
+const { variant = 'desktop' } = Astro.props;
+
+const navItems = [
+  {
+    label: 'Games',
+    href: '/games/',
+    dropdown: [
+      { label: 'PortalDoom (Working Title)', href: '/games/game-one/' },
+      { label: 'Launch My Dog', href: '/games/game-two/' },
+      { label: 'Poke My Balls', href: '/games/game-two/' },
+      { label: 'Knockback Arena', href: '/games/game-two/' },
+      { label: 'Itch.io Projects', href: '/games/game-two/' },
+    ],
+  },
+  { label: 'Docs', href: '/getting-started/' },
+  { label: 'Stream', href: '' },
+  { label: 'About', href: '/about/' },
+  { label: 'Contact', href: '' },
+];
+---
+
+<nav class:list={['site-nav', variant === 'mobile' && 'site-nav-mobile']}>
+  {navItems.map((item) => (
+    item.dropdown ? (
+      <div class="dropdown">
+        <div class="dropdown-row">
+          <a href={item.href} class="site-nav-link">{item.label}</a>
+          <button class="dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label={`${item.label} submenu`}>
+            <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true">
+              <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            </svg>
+          </button>
+        </div>
+        <ul class="dropdown-menu">
+          {item.dropdown.map((sub) => (
+            <li><a href={sub.href}>{sub.label}</a></li>
+          ))}
+        </ul>
+      </div>
+    ) : (
+      <a href={item.href} class="site-nav-link">{item.label}</a>
+    )
+  ))}
+</nav>
+
+<style>
+  .site-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+  }
+
+  .site-nav-link {
+    color: var(--sl-color-gray-2);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  .site-nav-link:hover {
+    color: var(--sl-color-white);
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-row {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .dropdown-trigger {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    color: var(--sl-color-gray-2);
+    cursor: pointer;
+    padding: 0.25rem;
+  }
+
+  .dropdown-trigger:hover {
+    color: var(--sl-color-white);
+  }
+
+  .dropdown-trigger svg {
+    transition: transform 0.15s ease;
+  }
+
+  .dropdown.open .dropdown-trigger svg {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    display: none;
+    flex-direction: column;
+    min-width: 160px;
+    margin: 0;
+    padding: 0.5rem 0;
+    list-style: none;
+    background: var(--sl-color-gray-7);
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.5rem;
+    z-index: 20;
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: flex;
+  }
+
+  .dropdown-menu li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--sl-color-gray-2);
+    text-decoration: none;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  .dropdown-menu li a:hover {
+    background: var(--sl-color-black);
+    color: var(--sl-color-white);
+  }
+
+  /* Mobile variant: stacked list, dropdowns expand inline instead of floating */
+  .site-nav-mobile {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+  }
+
+  .site-nav-mobile .site-nav-link {
+    padding: 0.75rem 0;
+    font-size: 1rem;
+  }
+
+  .site-nav-mobile .dropdown {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .site-nav-mobile .dropdown-row {
+    justify-content: space-between;
+    padding: 0.75rem 0;
+  }
+
+  .site-nav-mobile .dropdown-row .site-nav-link {
+    padding: 0;
+  }
+
+  .site-nav-mobile .dropdown-menu {
+    position: static;
+    border: none;
+    background: none;
+    padding: 0 0 0 1rem;
+    min-width: 0;
+  }
+
+  .site-nav-mobile .dropdown-menu li a {
+    padding: 0.5rem 0;
+  }
+</style>
+
+<script>
+  function setupDropdowns() {
+    document.querySelectorAll('.dropdown').forEach((dropdown) => {
+      const trigger = dropdown.querySelector('.dropdown-trigger');
+      if (!trigger || trigger.dataset.bound) return;
+      trigger.dataset.bound = 'true';
+
+      trigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = dropdown.classList.contains('open');
+        const isMobile = dropdown.closest('.site-nav-mobile');
+
+        // Only auto-close siblings in desktop mode — mobile accordions can stay independent
+        if (!isMobile) {
+          document.querySelectorAll('.dropdown.open').forEach((d) => {
+            if (d !== dropdown) {
+              d.classList.remove('open');
+              d.querySelector('.dropdown-trigger')?.setAttribute('aria-expanded', 'false');
+            }
+          });
+        }
+
+        dropdown.classList.toggle('open', !isOpen);
+        trigger.setAttribute('aria-expanded', String(!isOpen));
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (e.target.closest('.site-nav-mobile')) return; // don't auto-close mobile accordions on outside click
+      document.querySelectorAll('.dropdown.open').forEach((d) => {
+        d.classList.remove('open');
+        d.querySelector('.dropdown-trigger')?.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.dropdown.open').forEach((d) => {
+          d.classList.remove('open');
+          d.querySelector('.dropdown-trigger')?.setAttribute('aria-expanded', 'false');
+        });
+      }
+    });
+  }
+
+  setupDropdowns();
+  document.addEventListener('astro:page-load', setupDropdowns);
+</script>
