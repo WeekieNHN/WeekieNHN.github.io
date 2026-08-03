@@ -1,11 +1,16 @@
 ---
 const year = new Date().getFullYear();
+
+import SocialIcons from '@astrojs/starlight/components/SocialIcons.astro';
 ---
 
 <footer class="footer-box">
   <p>© 2016 - {year} Weekiepedia. All rights reserved.</p>
-  <p><a href="/privacy-policy/">Privacy Policy</a></p>
+  <p>
+    <a href="/privacy-policy/">Privacy Policy</a>
+  </p>
 </footer>
+
 
 <style>
   .footer-box {
