@@ -5,7 +5,9 @@ template: splash
 ---
 
 import { LinkButton } from '@astrojs/starlight/components'
+import { Icon } from '@astrojs/starlight/components';
 
+{/* Hero Section (Text and buttons over image) */}
 <section class="game-hero">
   <div class="game-hero-content">
     <h1>Poke My Balls</h1>
@@ -18,16 +20,20 @@ import { LinkButton } from '@astrojs/starlight/components'
       you play.
     </p>
 
-    <LinkButton href="#download" variant="primary">
+    <LinkButton href="#download" variant="secondary" icon="download">
       Download
     </LinkButton>
-
-    <LinkButton href="#_" target="_blank" icon="external" variant="minimal">
+    <LinkButton href="#_" target="_blank" icon="youtube" variant="secondary">
       Trailer
     </LinkButton>
   </div>
 </section>
 
+<section class="game-image-carousel"> 
+
+</section>
+
+{/* Download section (App store links) */}
 <section class="download-section" id="download">
   <div class="download-content">
     <h2>Download Poke My Balls</h2>
@@ -39,7 +45,7 @@ import { LinkButton } from '@astrojs/starlight/components'
         rel="noopener noreferrer"
         class="store-link"
       >
-        <span class="store-icon"></span>
+        <Icon class="store-icon" name="apple" />
 
         <span class="store-text">
           <small>Download on the</small>

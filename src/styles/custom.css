@@ -3,13 +3,17 @@
 }
 
 /* ========================================
-   Poke My Balls
+   Poke My Balls 
    ======================================== */
 
 /* Disable the Auto-added page title on the PMB Landing page */
 body:has(a[href="/games/poke-my-balls/"]) .page-title {
   display: none;
 }
+
+/* ========================================
+   Hero Section 
+   ======================================== */
 
 .game-hero {
   position: relative;
@@ -55,12 +59,15 @@ body:has(a[href="/games/poke-my-balls/"]) .page-title {
 }
 
 .game-hero-content h1 {
+  margin-top: 2rem;
   margin-bottom: 1rem;
   color: white;
+  font-size: 2.25rem;
 }
 
 .game-hero-content p {
   line-height: 1.8;
+  font-size: 1.1rem;
 }
 
 /* Don't apply the hero text effect to the buttons */
@@ -81,9 +88,13 @@ body:has(a[href="/games/poke-my-balls/"]) .page-title {
   }
 }
 
+/* ========================================
+   Download Section 
+   ======================================== */
+
 .download-section {
   width: 100%;
-  padding: 3rem 1.5rem;
+  padding: 3rem 1.5rem; /* Padding makes the gap between the sections*/
 
   box-sizing: border-box;
 
@@ -97,25 +108,6 @@ body:has(a[href="/games/poke-my-balls/"]) .page-title {
 
   text-align: center;
 }
-
-.download-content h2 {
-  margin: 0 0 0.5rem;
-}
-
-.download-content p {
-  margin: 0 auto 1.5rem;
-  max-width: 500px;
-
-  color: var(--sl-color-gray-3);
-}
-
-.store-links {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
 
 .download-content h2 {
   margin: 0 0 0.75rem;
