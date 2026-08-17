@@ -7,6 +7,22 @@ template: splash
 import { LinkButton } from '@astrojs/starlight/components'
 import { Icon } from '@astrojs/starlight/components';
 
+
+import ImageCarousel from '../../../components/ImageCarousel.astro';
+import screen1 from '../../../assets/images/poke-my-balls/screen-1.jpg';
+import screen2 from '../../../assets/images/poke-my-balls/screen-2.jpg';
+import screen3 from '../../../assets/images/poke-my-balls/screen-3.jpg';
+import screen4 from '../../../assets/images/poke-my-balls/screen-4.jpg';
+
+export const screenshots = [
+  { src: screen1, alt: 'Gameplay showing colored balls falling' },
+  { src: screen2, alt: 'Main Menu' },
+  { src: screen3, alt: 'High score screen' },
+  { src: screen4, alt: 'Shop Screen' },
+];
+
+
+
 {/* Hero Section (Text and buttons over image) */}
 <section class="game-hero">
   <div class="game-hero-content">
@@ -29,8 +45,34 @@ import { Icon } from '@astrojs/starlight/components';
   </div>
 </section>
 
-<section class="game-image-carousel"> 
+{/* Description */}
+<section class="game-description">
+  <div>
+  <h2>Description</h2>
+  <p>
+      Poke My Balls is a fun, simple, and addicting game. If you can tap your screen you can play Poke My Balls! Colored balls drop from the top of the screen, and tap all of the right color. Black balls, Blue balls, Green balls, and Red balls too, They all drop into view. If you prefer blue, then tap the blue. Compete with your friends for the highest score. More balls drop the longer you play. Now get out there and poke some balls.
+  </p>
+    
 
+    
+  <p>
+    There are two other modes: Power Poking and Living by Poking
+  </p>
+  <p>
+    <ul>
+      <li>Power Poking: Along with falling balls are falling power-ups. There’s a wall that blocks everything from falling, a bomb that clears the screen and a clock that slows time.</li>
+      <li>Living by Poking: Have you accrued some coins from playing the over modes? Spend them on lives that extend your playtime. You can use 3 lives per game, which will allow you to get much higher scores.</li>
+    </ul>
+  </p>
+
+  </div>
+</section>
+
+
+{/* Screenshots */}
+<section class="game-image-carousel">
+  <h2>Screenshots</h2>
+  <ImageCarousel images={screenshots} />
 </section>
 
 {/* Download section (App store links) */}

@@ -1,0 +1,380 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  images: { src: ImageMetadata; alt: string }[];
+  id?: string;
+}
+
+const { images, id = 'game-carousel' } = Astro.props;
+---
+
+<div class="carousel" id={id}>
+  <div class="carousel-track" role="region" aria-label="Screenshot gallery" tabindex="0">
+    {images.map((img, i) => (
+      <div class="carousel-slide" data-index={i}>
+        <Image
+          src={img.src}
+          alt={img.alt}
+          width={360}
+          height={640}
+          fit="cover"
+          loading="lazy"
+        />
+      </div>
+    ))}
+  </div>
+
+  <button class="carousel-btn prev" type="button" aria-label="Previous image">
+    <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg>
+  </button>
+  <button class="carousel-btn next" type="button" aria-label="Next image">
+    <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M8.6 16.6 10 18l6-6-6-6-1.4 1.4L13.2 12z"/></svg>
+  </button>
+
+  <div class="carousel-dots">
+    {images.map((_, i) => (
+      <button class="carousel-dot" type="button" data-index={i} aria-label={`Go to image ${i + 1}`}></button>
+    ))}
+  </div>
+</div>
+
+<div class="carousel-lightbox" aria-hidden="true">
+  <button class="lightbox-close" type="button" aria-label="Close">✕</button>
+  <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous image">
+    <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg>
+  </button>
+  <img src="" alt="" />
+  <button class="lightbox-nav lightbox-next" type="button" aria-label="Next image">
+    <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M8.6 16.6 10 18l6-6-6-6-1.4 1.4L13.2 12z"/></svg>
+  </button>
+</div>
+
+<style>
+  .carousel {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .carousel-track {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .carousel-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* aspect-ratio lives on the container, not the img, so every
+     slide's box is identical regardless of the image's own
+     load timing/behavior */
+  .carousel-slide {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    width: min(70vw, 260px);
+    aspect-ratio: 9 / 16;
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: zoom-in;
+  }
+
+  .carousel-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: cover;
+  }
+
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    display: grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0;
+    border-radius: 50%;
+    border: none;
+    background: var(--sl-color-bg, #1a1a1a);
+    color: var(--sl-color-text, #fff);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    opacity: 0.9;
+    z-index: 2;
+  }
+  .carousel-btn:hover {
+    opacity: 1;
+  }
+  .carousel-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+  .carousel-btn.prev {
+    left: -1.25rem;
+  }
+  .carousel-btn.next {
+    right: -1.25rem;
+  }
+
+  @media (max-width: 640px) {
+    .carousel-btn {
+      display: none;
+    }
+  }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 0.75rem 0 0 0;
+    padding: 0;
+  }
+
+  .carousel-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+    background: var(--sl-color-gray-4, #888);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .carousel-dot.active {
+    background: var(--sl-color-accent, #6366f1);
+    transform: scale(1.3);
+  }
+
+  /* Manual overlay lightbox — plain fixed div, no <dialog> quirks */
+  .carousel-lightbox {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+  .carousel-lightbox.open {
+    display: flex;
+  }
+  .carousel-lightbox img {
+    max-width: 80vw;
+    max-height: 90vh;
+    display: block;
+    margin: 0;
+    border-radius: 8px;
+  }
+  .lightbox-close {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  .lightbox-nav {
+    display: grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    margin: 0;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  .lightbox-nav:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  @media (max-width: 640px) {
+    .carousel-lightbox {
+      gap: 0.25rem;
+      padding: 1rem;
+    }
+    .lightbox-nav {
+      width: 2.25rem;
+      height: 2.25rem;
+    }
+  }
+</style>
+
+<script>
+  function initCarousels() {
+    document.querySelectorAll<HTMLElement>('.carousel').forEach((carousel) => {
+      const track = carousel.querySelector<HTMLElement>('.carousel-track')!;
+      const slides = Array.from(track.querySelectorAll<HTMLElement>('.carousel-slide'));
+      const prevBtn = carousel.querySelector<HTMLButtonElement>('.carousel-btn.prev')!;
+      const nextBtn = carousel.querySelector<HTMLButtonElement>('.carousel-btn.next')!;
+      const dots = Array.from(carousel.querySelectorAll<HTMLButtonElement>('.carousel-dot'));
+
+      const scrollToIndex = (index: number) => {
+        const slide = slides[index];
+        if (slide) {
+          track.scrollTo({ left: slide.offsetLeft - track.offsetLeft, behavior: 'smooth' });
+        }
+      };
+
+      // Single source of truth for which slide we're "on" — clicks update
+      // this directly instead of re-deriving it from scroll position, which
+      // is unreliable near the last slide (clamped scrollLeft can make the
+      // last two slides compute to the same position).
+      let currentIndex = 0;
+
+      const updateBoundaryStates = () => {
+        prevBtn.disabled = currentIndex <= 0;
+        nextBtn.disabled = currentIndex >= slides.length - 1;
+      };
+
+      const goToIndex = (index: number) => {
+        currentIndex = Math.max(0, Math.min(slides.length - 1, index));
+        scrollToIndex(currentIndex);
+        syncActiveDot();
+        updateBoundaryStates();
+      };
+
+      prevBtn.addEventListener('click', () => goToIndex(currentIndex - 1));
+      nextBtn.addEventListener('click', () => goToIndex(currentIndex + 1));
+      updateBoundaryStates();
+
+      dots.forEach((dot) => {
+        dot.addEventListener('click', () => {
+          goToIndex(Number(dot.dataset.index));
+        });
+      });
+
+      track.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') nextBtn.click();
+        if (e.key === 'ArrowLeft') prevBtn.click();
+      });
+
+      // Figure out which slide is actually centered in the track right now,
+      // based on real scroll position (only called once scrolling has
+      // settled — see debounce below).
+      const nearestIndex = () => {
+        let closest = 0;
+        let closestDist = Infinity;
+        slides.forEach((slide, i) => {
+          const dist = Math.abs(slide.offsetLeft - track.offsetLeft - track.scrollLeft);
+          if (dist < closestDist) {
+            closestDist = dist;
+            closest = i;
+          }
+        });
+        return closest;
+      };
+
+      const syncActiveDot = () => {
+        dots.forEach((d) => d.classList.remove('active'));
+        dots[currentIndex]?.classList.add('active');
+      };
+      syncActiveDot();
+
+      // Only recompute currentIndex from scroll position after scrolling has
+      // stopped for a moment — this avoids the observer/scroll firing mid
+      // smooth-scroll-animation and stomping on the index a button click just set.
+      let scrollSettleTimer: ReturnType<typeof setTimeout>;
+      track.addEventListener(
+        'scroll',
+        () => {
+          clearTimeout(scrollSettleTimer);
+          scrollSettleTimer = setTimeout(() => {
+            currentIndex = nearestIndex();
+            syncActiveDot();
+            updateBoundaryStates();
+          }, 120);
+        },
+        { passive: true }
+      );
+
+      // Lightbox with its own prev/next navigation
+      const lightbox = document.querySelector<HTMLElement>('.carousel-lightbox')!;
+      const lightboxImg = lightbox.querySelector('img')!;
+      const closeBtn = lightbox.querySelector<HTMLButtonElement>('.lightbox-close')!;
+      const lightboxPrev = lightbox.querySelector<HTMLButtonElement>('.lightbox-prev')!;
+      const lightboxNext = lightbox.querySelector<HTMLButtonElement>('.lightbox-next')!;
+
+      let lightboxIndex = 0;
+
+      const renderLightbox = () => {
+        const slide = slides[lightboxIndex];
+        const img = slide.querySelector('img')!;
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+      };
+
+      const openLightbox = (index: number) => {
+        lightboxIndex = index;
+        renderLightbox();
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const closeLightbox = () => {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      };
+
+      const showPrev = () => {
+        lightboxIndex = (lightboxIndex - 1 + slides.length) % slides.length;
+        renderLightbox();
+      };
+
+      const showNext = () => {
+        lightboxIndex = (lightboxIndex + 1) % slides.length;
+        renderLightbox();
+      };
+
+      slides.forEach((slide, i) => {
+        slide.addEventListener('click', () => openLightbox(i));
+      });
+
+      closeBtn.addEventListener('click', closeLightbox);
+      lightboxPrev.addEventListener('click', showPrev);
+      lightboxNext.addEventListener('click', showNext);
+
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') showPrev();
+        if (e.key === 'ArrowRight') showNext();
+      });
+    });
+  }
+
+  initCarousels();
+  document.addEventListener('astro:page-load', initCarousels);
+</script>
