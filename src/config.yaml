@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: Weekiepedia
+  site: 'https://weekienhn.github.io'
   base: '/'
   trailingSlash: false
 
@@ -9,9 +9,9 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Weekiepedia
+    template: '%s — Weekiepedia'
+  description: "\U0001F680 Artist stuck in a programmer's mind. Professional Godot user."
   robots:
     index: true
     follow: true

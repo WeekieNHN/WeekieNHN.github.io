@@ -10,6 +10,8 @@ import { getFormattedDate } from '~/utils/utils';
 
 import type { Post } from '~/types';
 
+import SeriesNav from '~/components/blog/SeriesNav.astro';
+
 export interface Props {
   post: Post;
   url: string | URL;
@@ -110,4 +112,7 @@ const { post, url } = Astro.props;
       <SocialShare url={url} text={post.title} class="mt-5 sm:mt-1 align-middle text-gray-500 dark:text-slate-600" />
     </div>
   </article>
+  <div class="mx-auto px-6 sm:px-6 max-w-3xl">
+    <SeriesNav postId={post.id} />
+  </div>
 </section>

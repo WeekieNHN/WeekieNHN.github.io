@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import { getPermalink } from '~/utils/permalinks';
+import { getFormattedDate } from '~/utils/utils';
+
+const { series, heading = 'Devlogs' } = Astro.props;
+
+const posts = (await getCollection('post'))
+  .filter((p) => p.data.series === series && !p.data.draft)
+  .sort((a, b) => (a.data.seriesOrder ?? 0) - (b.data.seriesOrder ?? 0));
+---
+
+<section class="mt-12">
+  <h2 class="text-3xl font-bold font-heading mb-6">{heading}</h2>
+  {posts.length === 0 && <p>No posts yet.</p>}
+  <ol class="space-y-4">
+    {posts.map((p, i) => (
+      <li>
+        <a
+          href={getPermalink(p.id, 'post')}
+          class="block p-5 rounded-lg border border-gray-300 dark:border-gray-700 hover:shadow-lg transition"
+        >
+          <span class="text-sm text-gray-500 dark:text-slate-400">
+            Part {i + 1}
+            {p.data.publishDate && <> · {getFormattedDate(p.data.publishDate)}</>}
+          </span>
+          <h3 class="text-2xl font-semibold">{p.data.title}</h3>
+          {p.data.excerpt && <p class="mt-1">{p.data.excerpt}</p>}
+        </a>
+      </li>
+    ))}
+  </ol>
+</section>

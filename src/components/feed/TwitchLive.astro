@@ -1,0 +1,39 @@
+---
+const { endpoint, channel } = Astro.props;
+---
+
+<div
+  id="twitch-live"
+  data-endpoint={endpoint}
+  data-channel={channel}
+  class="hidden mb-10 rounded-lg border-2 border-purple-500 p-5"
+>
+  <p class="text-sm font-semibold uppercase tracking-wide text-purple-500">🔴 Live now on Twitch</p>
+  <a id="twitch-link" class="block text-2xl font-bold hover:underline" target="_blank" rel="noopener noreferrer"></a>
+  <p id="twitch-meta" class="text-muted dark:text-slate-400"></p>
+</div>
+
+<script>
+  async function checkTwitch() {
+    const el = document.getElementById('twitch-live');
+    if (!el || !el.dataset.endpoint) return;
+    try {
+      const res = await fetch(el.dataset.endpoint);
+      const data = await res.json();
+      if (!data.live) return;
+
+      const link = document.getElementById('twitch-link') as HTMLAnchorElement;
+      link.href = `https://twitch.tv/${el.dataset.channel}`;
+      link.textContent = data.title || 'Streaming now';
+
+      const meta = [data.game, data.viewers != null ? `${data.viewers} watching` : null].filter(Boolean);
+      document.getElementById('twitch-meta')!.textContent = meta.join(' · ');
+
+      el.classList.remove('hidden');
+    } catch {
+      // Stay hidden if the check fails.
+    }
+  }
+
+  document.addEventListener('astro:page-load', checkTwitch);
+</script>

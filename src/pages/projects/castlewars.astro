@@ -1,0 +1,22 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import SeriesPostList from '~/components/blog/SeriesPostList.astro';
+
+const metadata = {
+  title: 'Castle Wars',
+  description: 'Short description of Castle Wars.',
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="px-4 py-16 mx-auto max-w-3xl">
+    <h1 class="text-4xl font-bold mb-4">Castle Wars</h1>
+    <p class="text-lg mb-8">
+      A brief description of the game and what the devlog series covers.
+    </p>
+
+    <!-- Screenshots, trailer, download links can go here -->
+
+    <SeriesPostList series="Castle Wars Devlogs" heading="Devlogs" />
+  </section>
+</Layout>

@@ -1,0 +1,80 @@
+<dialog
+  id="lightbox"
+  class="m-auto bg-transparent p-0 max-w-[95vw] max-h-[95vh] overflow-visible backdrop:bg-black/85"
+>
+  <div class="relative">
+    <img id="lightbox-img" src="" alt="" class="max-w-[95vw] max-h-[85vh] object-contain rounded" />
+    <button
+      type="button"
+      id="lightbox-close"
+      aria-label="Close"
+      class="absolute -top-10 right-0 text-white text-3xl leading-none px-2">✕</button
+    >
+    <button
+      type="button"
+      id="lightbox-prev"
+      aria-label="Previous image"
+      class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 text-white text-2xl"
+      >‹</button
+    >
+    <button
+      type="button"
+      id="lightbox-next"
+      aria-label="Next image"
+      class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 text-white text-2xl"
+      >›</button
+    >
+  </div>
+  <p id="lightbox-caption" class="mt-2 text-center text-sm text-white max-w-xl mx-auto"></p>
+</dialog>
+
+<script>
+  function initLightbox() {
+    const dialog = document.getElementById('lightbox') as HTMLDialogElement | null;
+    if (!dialog || dialog.dataset.ready) return;
+    dialog.dataset.ready = 'true';
+
+    const img = document.getElementById('lightbox-img') as HTMLImageElement;
+    const caption = document.getElementById('lightbox-caption')!;
+    const prev = document.getElementById('lightbox-prev')!;
+    const next = document.getElementById('lightbox-next')!;
+    const close = document.getElementById('lightbox-close')!;
+
+    let items: HTMLElement[] = [];
+    let index = 0;
+
+    const show = (i: number) => {
+      index = (i + items.length) % items.length;
+      const el = items[index];
+      img.src = el.dataset.full ?? '';
+      img.alt = el.dataset.alt ?? '';
+      caption.textContent = el.dataset.alt ?? '';
+      const multiple = items.length > 1;
+      prev.style.display = multiple ? '' : 'none';
+      next.style.display = multiple ? '' : 'none';
+    };
+
+    document.querySelectorAll<HTMLElement>('[data-gallery]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        items = Array.from(document.querySelectorAll<HTMLElement>('[data-gallery]')).filter(
+          (el) => el.dataset.gallery === btn.dataset.gallery
+        );
+        show(items.indexOf(btn));
+        dialog.showModal();
+      });
+    });
+
+    prev.addEventListener('click', () => show(index - 1));
+    next.addEventListener('click', () => show(index + 1));
+    close.addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', (e) => {
+      if (e.target === dialog) dialog.close();
+    });
+    dialog.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') show(index - 1);
+      if (e.key === 'ArrowRight') show(index + 1);
+    });
+  }
+
+  document.addEventListener('astro:page-load', initLightbox);
+</script>

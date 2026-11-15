@@ -1,0 +1,49 @@
+---
+import { getCollection } from 'astro:content';
+import { getPermalink } from '~/utils/permalinks';
+
+const { postId } = Astro.props;
+
+const entries = await getCollection('post');
+const current = entries.find((p) => p.id === postId);
+const series = current?.data.series;
+
+const all = series
+  ? entries
+      .filter((p) => p.data.series === series && !p.data.draft)
+      .sort((a, b) => (a.data.seriesOrder ?? 0) - (b.data.seriesOrder ?? 0))
+  : [];
+
+const index = all.findIndex((p) => p.id === postId);
+const prev = index > 0 ? all[index - 1] : undefined;
+const next = index >= 0 ? all[index + 1] : undefined;
+
+const buttonClass =
+  'inline-block px-5 py-2 rounded-md border border-gray-300 dark:border-gray-600 font-medium hover:bg-gray-100 dark:hover:bg-slate-800 transition';
+---
+
+{
+  series && all.length > 1 && (
+    <nav class="mx-auto max-w-3xl px-6 my-10 text-center" aria-label="Series navigation">
+      <p class="text-xl font-semibold mb-4">
+        {series} · Part {index + 1} of {all.length}
+      </p>
+      <div class="flex justify-center gap-4">
+        {prev ? (
+          <a href={getPermalink(prev.id, 'post')} class={buttonClass} title={prev.data.title}>
+            ← Previous
+          </a>
+        ) : (
+          <span />
+        )}
+        {next ? (
+          <a href={getPermalink(next.id, 'post')} class={buttonClass} title={next.data.title}>
+            Next →
+          </a>
+        ) : (
+          <span />
+        )}
+      </div>
+    </nav>
+  )
+}

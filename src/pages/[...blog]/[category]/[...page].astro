@@ -8,6 +8,7 @@ import Headline from '~/components/blog/Headline.astro';
 import Pagination from '~/components/blog/Pagination.astro';
 import Breadcrumbs from '~/components/common/Breadcrumbs.astro';
 import { getPermalink, getBlogPermalink } from '~/utils/permalinks';
+import { categoryInfo } from '~/data/categoryInfo';
 
 export const prerender = true;
 
@@ -21,6 +22,11 @@ const { page, category } = Astro.props as Props;
 
 const currentPage = page.currentPage ?? 1;
 
+// Descriptions shown under the category title. Keys are the category slugs.
+
+
+const info = categoryInfo[category.slug];
+
 const breadcrumbs = [
   { text: 'Home', href: getPermalink('/') },
   { text: 'Blog', href: getBlogPermalink() },
@@ -30,8 +36,8 @@ const breadcrumbs = [
 ];
 
 const metadata = {
-  title: `Category '${category.title}' ${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
-  description: `Articles in the ${category.title} category of the AstroWind blog.`,
+  title: `${category.title}${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+  description: info?.description ?? `Posts in the ${category.title} category.`,
   robots: {
     index: blogCategoryRobots?.index,
     follow: blogCategoryRobots?.follow,
@@ -43,6 +49,20 @@ const metadata = {
   <Breadcrumbs bar items={breadcrumbs} />
   <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
     <Headline>{category.title}</Headline>
+    {
+      info && currentPage === 1 && (
+        <div class="mb-10 text-left">
+          <p class="text-xl text-muted dark:text-slate-400">{info.description}</p>
+          {info.link && (
+            <p class="mt-3">
+              <a href={info.link.href} class="underline">
+                {info.link.text} →
+              </a>
+            </p>
+          )}
+        </div>
+      )
+    }
     <BlogList posts={page.data} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
   </section>

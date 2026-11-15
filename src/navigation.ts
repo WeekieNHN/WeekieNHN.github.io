@@ -1,168 +1,70 @@
 import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
+  position: 'right',
   links: [
     {
-      text: 'Homes',
+      text: 'Games',
       links: [
-        {
-          text: 'SaaS',
-          href: getPermalink('/homes/saas'),
-        },
-        {
-          text: 'Startup',
-          href: getPermalink('/homes/startup'),
-        },
-        {
-          text: 'Mobile App',
-          href: getPermalink('/homes/mobile-app'),
-        },
-        {
-          text: 'Personal',
-          href: getPermalink('/homes/personal'),
-        },
+        { text: 'PortalDoom (Working Title)', href: getPermalink('/games/portaldoom') },
+        { text: 'Launch My Dog', href: getPermalink('/games/launch-my-dog') },
+        { text: 'Poke My Balls', href: getPermalink('/games/poke-my-balls') },
+        { text: 'More on Itch.io', href: 'https://weekie.itch.io/', target: '_blank' },
       ],
     },
     {
-      text: 'Pages',
+      text: 'Docs',
       links: [
-        {
-          text: 'Features (Anchor Link)',
-          href: getPermalink('/#features'),
-        },
-        {
-          text: 'Services',
-          href: getPermalink('/services'),
-        },
-        {
-          text: 'Pricing',
-          href: getPermalink('/pricing'),
-        },
-        {
-          text: 'About us',
-          href: getPermalink('/about'),
-        },
-        {
-          text: 'Contact',
-          href: getPermalink('/contact'),
-        },
-        {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
-        },
-      ],
-    },
-    {
-      text: 'Landing',
-      links: [
-        {
-          text: 'Lead Generation',
-          href: getPermalink('/landing/lead-generation'),
-        },
-        {
-          text: 'Long-form Sales',
-          href: getPermalink('/landing/sales'),
-        },
-        {
-          text: 'Click-Through',
-          href: getPermalink('/landing/click-through'),
-        },
-        {
-          text: 'Product Details (or Services)',
-          href: getPermalink('/landing/product'),
-        },
-        {
-          text: 'Coming Soon or Pre-Launch',
-          href: getPermalink('/landing/pre-launch'),
-        },
-        {
-          text: 'Subscription',
-          href: getPermalink('/landing/subscription'),
-        },
+        { text: 'Godot Dev Console', href: getPermalink('/docs/godot-dev-console') },
+        { text: 'Godot Localization', href: getPermalink('/docs/godot-localization') },
+        { text: 'Godot Menu System', href: getPermalink('/docs/godot-menu-system') },
       ],
     },
     {
       text: 'Blog',
       links: [
-        {
-          text: 'Blog List',
-          href: getBlogPermalink(),
-        },
-        {
-          text: 'Article',
-          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
-        },
-        {
-          text: 'Article (with MDX)',
-          href: getPermalink('markdown-elements-demo-post', 'post'),
-        },
-        {
-          text: 'Category Page',
-          href: getPermalink('tutorials', 'category'),
-        },
-        {
-          text: 'Tag Page',
-          href: getPermalink('astro', 'tag'),
-        },
+        { text: 'PortalDoom Devlogs', href: getPermalink('portaldoom-devlogs', 'category') },
+        { text: 'Castle Wars Devlogs', href: getPermalink('castle-wars-devlogs', 'category') },
+        { text: '20 Game Challenge', href: getPermalink('20-game-challenge', 'category') },
+        { text: 'Frank\'s Radio Show', href: getPermalink('franks-radio-show', 'category') },
       ],
     },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/arthelokyo/astrowind', target: '_blank' }],
+  socialLinks: [
+    { ariaLabel: 'Patreon', icon: 'tabler:brand-patreon', href: 'https://www.patreon.com/c/Weekie' },
+    { ariaLabel: 'YouTube', icon: 'tabler:brand-youtube', href: 'https://youtube.com/@weekie' },
+  ],
 };
 
 export const footerData = {
   links: [
     {
-      title: 'Product',
+      title: 'Games',
       links: [
-        { text: 'Features', href: getPermalink('/#features') },
-        { text: 'Pricing', href: getPermalink('/pricing') },
-        { text: 'Services', href: getPermalink('/services') },
-        { text: 'Blog', href: getBlogPermalink() },
-      ],
-    },
-    {
-      title: 'Demos',
-      links: [
-        { text: 'SaaS', href: getPermalink('/homes/saas') },
-        { text: 'Startup', href: getPermalink('/homes/startup') },
-        { text: 'Mobile App', href: getPermalink('/homes/mobile-app') },
-        { text: 'Personal', href: getPermalink('/homes/personal') },
-        { text: 'Landing pages', href: getPermalink('/landing/lead-generation') },
+        { text: 'PortalDoom (Working Title)', href: getPermalink('/games/portaldoom') },
+        { text: 'Launch My Dog', href: getPermalink('/games/launch-my-dog') },
+        { text: 'Poke My Balls', href: getPermalink('/games/poke-my-balls') },
+        { text: 'More on Itch.io', href: 'https://weekie.itch.io/' },
       ],
     },
     {
       title: 'Resources',
       links: [
-        { text: 'Documentation', href: 'https://github.com/arthelokyo/astrowind#readme' },
-        { text: 'Skills for AI agents', href: 'https://github.com/arthelokyo/astrowind/tree/main/.agents/skills' },
-        { text: 'Releases', href: 'https://github.com/arthelokyo/astrowind/releases' },
-        { text: 'Discussions', href: 'https://github.com/arthelokyo/astrowind/discussions' },
-      ],
-    },
-    {
-      title: 'Company',
-      links: [
         { text: 'About', href: getPermalink('/about') },
         { text: 'Contact', href: getPermalink('/contact') },
-        { text: 'Report an issue', href: 'https://github.com/arthelokyo/astrowind/issues' },
-        { text: 'License', href: 'https://github.com/arthelokyo/astrowind/blob/main/LICENSE.md' },
+        { text: 'Media Kit', href: 'https://beacons.ai/weekie/mediakit?origin=lib' },
+        { text: 'Privacy Policy', href: getPermalink('/privacy') },
       ],
     },
   ],
-  secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
-  ],
   socialLinks: [
+    { ariaLabel: 'YouTube', icon: 'tabler:brand-youtube', href: 'https://youtube.com/@weekie', target: '_blank' },
+    { ariaLabel: 'Bluesky', icon: 'tabler:brand-bluesky', href: 'https://bsky.app/profile/weekiepedia.org', target: '_blank' },
+    { ariaLabel: 'Patreon', icon: 'tabler:brand-patreon', href: 'https://www.patreon.com/c/Weekie', target: '_blank' },
+    { arialabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/weekie_nhn', target: '_blank' },
+    { ariaLabel: 'Itch.io', icon: 'simple-icons:itchdotio', href: 'https://weekie.itch.io/', target: '_blank' },
+    { ariaLabel: 'GitHub', icon: 'tabler:brand-github', href: 'https://github.com/WeekieNHN', target: '_blank'  },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/arthelokyo/astrowind' },
   ],
-  footNote: `
-    Made by <a class="text-blue-600 underline dark:text-muted" href="https://arthelokyo.com"> Arthelokyo</a> · All rights reserved.
-  `,
+  footNote: `Weekiepedia 2016-${new Date().getFullYear()} · All rights reserved.`,
 };
