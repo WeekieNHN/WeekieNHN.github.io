@@ -1,0 +1,212 @@
+---
+import { YouTube } from '@astro-community/astro-embed-youtube';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Knockback Arena',
+  description:
+    'A split-screen arena shooter where bullets knock enemies back instead of hurting them.',
+};
+
+const h2Class = 'clear-both text-2xl sm:text-3xl font-bold font-heading tracking-tight dark:text-white mb-6';
+const h3Class = 'clear-both text-xl sm:text-2xl font-bold font-heading tracking-tight dark:text-white mt-10 mb-4';
+
+// GIFs float beside the first paragraph of their section.
+// The ! prefix overrides the typography plugin's default image margins.
+// Mobile: full width with a small gap above and below. Desktop: no top gap so the GIF lines up with the text.
+const gifBase = 'w-full h-auto rounded-lg shadow-lg my-4 md:!my-0 md:!mb-3 md:w-2/5';
+const gifRight = `${gifBase} md:float-right md:ml-6`;
+const gifLeft = `${gifBase} md:float-left md:mr-6`;
+---
+
+<Layout metadata={metadata}>
+  <!-- Title and intro -->
+  <section class="px-4 md:px-6 pt-16 sm:pt-24 pb-8 mx-auto max-w-3xl">
+    <h1 class="text-4xl md:text-6xl font-bold font-heading tracking-tighter mb-6">Knockback Arena</h1>
+    <p class="text-lg md:text-xl text-muted dark:text-slate-400">
+      A split-screen arena shooter where bullets don't do damage, they knock enemies back. It's been shelved but it's worth looking at anyways.
+    </p>
+  </section>
+
+  <!-- Article body -->
+  <section class="px-4 md:px-6 pb-16 sm:pb-20 mx-auto max-w-3xl">
+    <div class="prose lg:prose-xl dark:prose-invert max-w-none">
+      <!-- Intro/Ideation -->
+      <h2 class={h2Class}>Intro/Ideation</h2>
+
+      <p>
+        A while back I watched a <a href="https://youtu.be/5-iST0a69cI?si=3U4mzQ9sm-osOv-Z&t=189" target="_blank" rel="noopener noreferrer">Miziziziz video</a> which suggested the idea of making an arena shooter where bullets don't do damage, but instead knock enemies back. I was in the throes of debugging some network troubles I was having with <a href="/games/castle-wars">Castle Wars</a>, so I decided to give it a stab.
+      </p>
+
+      <p>
+        I opened up Unity. I made 1 map, 1 player controller, and set up 4-player split screen. To prevent scope creep I instituted the "rule of 4," meaning that for every mechanic I added: there can only be 4 options for it. Examples include:
+      </p>
+
+      <ul>
+        <li>4 weapons</li>
+        <li>4 grenades</li>
+        <li>4 traps</li>
+        <li>4 enemy types*</li>
+        <li>4 inventory slots</li>
+      </ul>
+
+      <p>This was all to keep myself from going crazy, and to keep the work manageable. Limit content so I could keep moving forwards.</p>
+
+      <!-- Arena -->
+      <h2 class={h2Class}>Arena</h2>
+
+      <p>
+        <img src="/images/knockback-arena/Arena_Gif_Small.gif" alt="The arena, an octagon surrounded by a lava moat" loading="lazy" class={gifRight} />
+        The arena is pretty simple. It's an octagon which has a smaller octagon in the center. There is a shop and a drop zone, all surrounded by a lava moat. Falling into the lava causes the player, or anything else, to die. On the other side of the lava are some empty bleachers, and some walls which slowly move around to keep the background dynamic.
+      </p>
+
+      <p>
+        There's a scoreboard where players can see stats like the current round, round type, payouts, and each player's money.
+      </p>
+
+      <p>
+        Lastly, there's a "secret" room underneath the arena where dead players reside while playing split screen. This way they have something to do or watch while they wait to be revived.
+      </p>
+
+      <p>
+        I hoped that I could spend some time world-building. I had some ideas given the empty bleachers and the split-screen-dead-room. Something along the lines of a GLaDOS-style character making players fight waves of enemies for their own entertainment since the rest of the world has come and passed.
+      </p>
+
+      <!-- Shop & Drop Zone -->
+      <h2 class={h2Class}>Shop & Drop Zone</h2>
+
+      <p>
+        <img src="/images/knockback-arena/Shop_Gif_Small.gif" alt="The shop rising out of the ground" loading="lazy" class={gifLeft} />
+        Obviously the players are going to need some method of obtaining the weapons, traps, and grenades they'll use to fight the waves of enemies. Thus the shop comes out of the ground before every round, and disappears when you start the next. Players can spend their money on the aforementioned weapons, grenades, traps, and revives.
+      </p>
+
+      <p>
+        <img src="/images/knockback-arena/Parachute_Gif_Small.gif" alt="A parachute carrying an item down to the drop zone" loading="lazy" class={gifRight} />
+        When a player buys an item from the shop (with the exception of the lava pit, you'll understand why later), a parachute spawns on the other end of the arena above the drop zone. This is where you collect the items purchased, as well as the spawnpoint for new and revived players.
+      </p>
+
+      <hr class="my-12 border-gray-300 dark:border-gray-700" />
+
+      <!-- Weapons -->
+      <h2 class={h2Class}>Weapons <span class="ml-3 align-middle text-base sm:text-lg font-normal font-sans text-muted dark:text-slate-400">Aug 8, 2024</span></h2>
+      <div class="not-prose my-8 [&_lite-youtube]:!w-full [&_lite-youtube]:!max-w-none">
+        <YouTube id="nNGxyOnwXAU" />
+      </div>
+
+      <p>
+        <img src="/images/knockback-arena/Rifle_Gif_Small.gif" alt="The rifle being picked up and fired" loading="lazy" class={gifLeft} />
+        The next bit of work I did was to build out basic interaction and inventory systems. I then populated the shop with some guns. I'm an FPS kid at heart, so I really like making shooters.
+      </p>
+
+      <p>
+        I added a pistol, a rifle, a shotgun, and a rocket launcher (blame my <a href="https://www.halopedia.org/" target="_blank" rel="noopener noreferrer">Halo</a> roots for both the rocket launcher's implementation and its visuals). I got models from Kenney Assets. I animated pickup and fire animations for each of them. I got sound effects from Open Game Art, and overall the weapons feel pretty nice to use. They do their own amount of knockback when you hit enemies and they have unique crosshairs (also from Kenney Assets).
+      </p>
+
+      <hr class="my-12 border-gray-300 dark:border-gray-700" />
+
+      <!-- Traps -->
+      <h2 class={h2Class}>Traps <span class="ml-3 align-middle text-base sm:text-lg font-normal font-sans text-muted dark:text-slate-400">Oct 5, 2024</span></h2>
+      <div class="not-prose my-8 [&_lite-youtube]:!w-full [&_lite-youtube]:!max-w-none">
+        <YouTube id="dwpOKPVbSHQ" />
+      </div>
+
+      <p>
+        Originally I wanted traps to be hazards laid throughout the map. There's a lava pit in the center that the player can activate, and I had planned for there to be spikes, tripwires, and decoys in the four "zone" of the map (the four points where enemies can spawn). I realized at some point that it'd be much more fun to be able to choose where the traps go. That way players could choose to "stack" traps and chain their effects together.
+      </p>
+
+      <h3 class={h3Class}>The Lava Pit</h3>
+
+      <p>
+        <img src="/images/knockback-arena/Lava_Pit_Gif_Small.gif" alt="The lava pit opening in the middle of the arena" loading="lazy" class={gifRight} />
+        The lava pit is the only trap in a fixed position. Unlike the spikes, tripwire, and decoy which are placeable.
+      </p>
+
+      <p>
+        When purchased, the lava pit opens in the middle of the map. It will stay open until the game ends so you'll want to be sure that you do not fall in. This can be paired with a decoy to make the enemies blindly walk into it.
+      </p>
+
+      <h3 class={h3Class}>Spikes</h3>
+
+      <p>
+        <img src="/images/knockback-arena/Spikes_Gif_Small.gif" alt="Spikes triggering under a group of enemies" loading="lazy" class={gifLeft} />
+        The spikes wait until enemies are walking atop them to trigger. There is a delay to let more enemies gather on top of them. The spikes  appear to just kill the enemies, but it's a bit more complicated as I implemented a hit system. Entities can take a number of hits before they die. Basic enemies can only take one. The spikes emit one hit, and thus will kill any basic enemies. Other entities like the decoy are able to take multiple. I know this breaks the knockback-only idea but it felt okay to mee since it still requires some thought to goad the enemies into. It's still positional in how it does damage so I let it slide.
+      </p>
+
+      <h3 class={h3Class}>Decoys</h3>
+
+      <p>
+        <img src="/images/knockback-arena/Decoy_Gif_Small.gif" alt="A decoy drawing enemies toward it" loading="lazy" class={gifRight} />
+        Decoys are more complex. They don't do damage or knock enemies back, rather they act as a target. Players can use these to get some recuperation time, or to lure enemies into other traps. This allows players to "chain" or "stack" traps as I mentioned previously.
+      </p>
+
+      <h3 class={h3Class}>Tripwires w/ Claymores</h3>
+
+      <p>
+        <img src="/images/knockback-arena/Tripwire_Gif_Small.gif" alt="A tripwire setting off three claymores" loading="lazy" class={gifLeft} />
+        The tripwire is a basic trap. When enemies trigger it, three claymores explode and push them back. They'll also push the player if you're in the way. I love this thing. It has a very meaty sound effect that plays, and it feels nice to bully the enemies.
+      </p>
+
+      <p>
+        Tripwires work best when paired with a decoy. This way enemies blindly walk into the tripwire. Making knockback progress while giving the player a chance to breathe.
+      </p>
+
+
+      <hr class="my-12 border-gray-300 dark:border-gray-700" />
+
+      <!-- Grenades -->
+      <h2 class={h2Class}>Grenades <span class="ml-3 align-middle text-base sm:text-lg font-normal font-sans text-muted dark:text-slate-400">Oct 12, 2024</span></h2>
+      <div class="not-prose my-8 [&_lite-youtube]:!w-full [&_lite-youtube]:!max-w-none">
+        <YouTube id="Ecjw-bEwJr0" />
+      </div>
+
+      <h3 class={h3Class}>Normal Grenade</h3>
+
+      <p>
+        <img src="/images/knockback-arena/Grenade_Gif_Small.gif" alt="A grenade bouncing and then exploding" loading="lazy" class={gifRight} />
+        The normal grenade is basic. You pick it up, aim, and throw it. There's a preview of the arc you'll throw it at. When you throw the grenade it will bounce for a bit, and then explode. I toyed around with making it stick to things and/or explode on impact. As all the other grenades explode on impact, I left this one time-based for variety.
+      </p>
+
+      <h3 class={h3Class}>Nuke</h3>
+
+      <p>
+        <img src="/images/knockback-arena/Nuke_Gif_Small.gif" alt="The nuke exploding on impact" loading="lazy" class={gifLeft} />
+        The nuke is basically a grenade on steroids. It has an insane amount of knockback and explodes on impact. It has a beefy sound effect and a lot of particles, but you may notice one thing missing: there's no mushroom cloud. I would love to have a mushroom cloud here, but I did not know how to make one that (a) looks good and (b) is performant. 
+      </p>
+
+      <h3 class={h3Class}>Black Hole</h3>
+
+      <p>
+        <img src="/images/knockback-arena/Black_Hole_Gif_Small.gif" alt="The black hole pulling enemies in" loading="lazy" class={gifRight} />
+        Okay, the black hole is kind of nuts. It is in no way physically accurate. You can pick one up, for Christ's sake. I got the shader from <a href="https://www.youtube.com/watch?v=SWJZcQvTmnw" target="_blank" rel="noopener noreferrer">this YouTube video</a>.
+      </p>
+
+      <p>
+        The black hole open when it hits something. While it's active it pulls enemies in and shoots them out in random directions. After some time it closes. The player is not affected by these physics because I was simply too lazy to implement them into the player's controller. I am also of the opinion that mechanics that remove control from the player (like being pulled into the black hole) don't feel fun to play, and there's not a clear indication of where that pulling would start.
+      </p>
+
+      <h3 class={h3Class}>Ice Grenade</h3>
+
+      <p>
+        <img src="/images/knockback-arena/Ice_Grenade_Gif_Small.gif" alt="An ice grenade freezing enemies" loading="lazy" class={gifLeft} />
+        The last grenade I added is an ice grenade. It's pretty simple: you throw it at enemies and they freeze for a little bit. I got the shader from <a href="https://www.youtube.com/watch?v=inht8WYX-A4" target="_blank" rel="noopener noreferrer">this YouTube video</a>, and it works great! I especially like the refraction you can see through the grenade while you hold it. I paired it with some spell-casting and shatter sound effects, and it feels good.
+      </p>
+    
+
+    <hr class="my-12 border-gray-300 dark:border-gray-700" />
+
+    <h2 class={h2Class}>Closure <span class="ml-3 align-middle text-base sm:text-lg font-normal font-sans text-muted dark:text-slate-400">Nov 14, 2024</span></h2>
+
+    <p>
+        Okay so this game got shelved. It was going good, so why did it get shelved? To put it plainly: this game was a project I was using as an outlet to work on something, and make progress on something, while Castle Wars was stalled late 2024. I was having issues with EasyCharacterMovement2 and Fishnet Networking working together. I was getting a lot of desyncs when using them together, and I'd hoped that if I worked on something else for a while the issues would be resolved by other members of the community. To my knowledge those issues never got resolved (I never really checked), and were likely due to my own implementation of the networking stack on my character controller. I didn't design the character controller with networking in mind. A mistake I'll never make again.
+    </p>
+
+    <p>
+        It's also worth noting that in September of 2024, I tried Godot. I now exclusively use Godot. At the time, I wanted to port Castle Wars to Godot so I could keep working on it there (and to avoid the Fishnet character issues). This was a lot of work. I put down Knockback Arena to focus once again on Castle Wars. Castle Wars has also since been put down, but that's a story for another time.
+    </p>
+
+    <p>
+        I liked this game as a development outlet but I don't think it's good enough to pick back up and finish, especially in Unity.
+    </p>
+    </div>
+  </section>
+</Layout>

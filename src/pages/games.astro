@@ -1,0 +1,139 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import { games } from '~/data/games';
+ 
+const metadata = {
+  title: 'All Projects',
+  description:
+    "Every game, art test, game jam entry, and prototype I've finished and shared.",
+};
+ 
+type Status = 'released' | 'in-development' | 'unreleased';
+type Game = (typeof games)[number] & { status?: Status; sortDate?: string };
+ 
+// Use an explicit `status` from games.ts if there is one.
+// Otherwise fall back to the old rule: no releaseDate means in development.
+const getStatus = (game: Game): Status =>
+  game.status ?? (game.releaseDate ? 'released' : 'in-development');
+ 
+// Ordering uses sortDate if set, otherwise releaseDate.
+// Games with neither keep their games.ts order at the bottom of the list.
+const sortDateOf = (game: Game) => game.sortDate ?? game.releaseDate;
+ 
+const sortedGames = [...(games as Game[])].sort((a, b) => {
+  const aDate = sortDateOf(a);
+  const bDate = sortDateOf(b);
+  if (!aDate && !bDate) return 0;
+  if (!aDate) return 1;
+  if (!bDate) return -1;
+  return new Date(bDate).getTime() - new Date(aDate).getTime();
+});
+ 
+const formatDate = (value?: string) =>
+  value
+    ? new Date(value).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        timeZone: 'UTC',
+      })
+    : '';
+---
+ 
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+  <div class="-mb-10 md:-mb-16">
+    <Hero tagline="All Projects">
+      <Fragment slot="title">
+        Every Project I've Finished*
+      </Fragment>
+      <Fragment slot="subtitle">
+        Whether it's a fully-released game, a one-off art test, something for a game jam, or a prototype I'm working on just to test. If I think it is worth showing off, it's here.
+      </Fragment>
+    </Hero>
+  </div>
+ 
+  <!-- Cards of all Games ******************* -->
+  <section class="mx-auto max-w-6xl px-4 pb-12 pt-0 sm:px-6">
+    <ul class="grid gap-8 md:grid-cols-2">
+      {
+        sortedGames.map((game) => {
+          const status = getStatus(game);
+          return (
+            <li data-feed-item class="flex">
+              <a
+                href={game.url}
+                class="group flex w-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-page p-3 text-default shadow-sm transition hover:border-primary hover:shadow-lg dark:border-white/10 sm:p-4"
+              >
+                <!-- Image -->
+                <div class="relative overflow-hidden rounded-xl">
+                  {game.cover ? (
+                    <img
+                      src={game.cover}
+                      alt={`${game.title} cover`}
+                      loading="lazy"
+                      class="aspect-video w-full object-cover transition duration-300 group-hover:scale-[1.02]"
+                    />
+                  ) : (
+                    <div class="aspect-video w-full bg-black/10 dark:bg-white/10" />
+                  )}
+                </div>
+ 
+                <!-- Title and subtitle -->
+                <div class="px-1 pt-4 sm:px-2">
+                  <h3 class="text-xl font-bold group-hover:text-primary sm:text-2xl">
+                    {game.title}
+                  </h3>
+                  {game.subtitle && (
+                    <p class="mt-1 text-sm text-muted">{game.subtitle}</p>
+                  )}
+                </div>
+ 
+                <!-- Description, then tags + footer pinned to the bottom -->
+                <div class="flex flex-1 flex-col gap-4 px-1 pb-1 pt-4 sm:px-2">
+                  {game.description && (
+                    <p class="text-muted">{game.description}</p>
+                  )}
+ 
+                  <!-- mt-auto pushes tags and footer to the bottom of the card -->
+                  <div class="mt-auto flex flex-col gap-4">
+                    {game.tags?.length > 0 && (
+                      <ul class="flex flex-wrap gap-2">
+                        {game.tags.map((tag) => (
+                          <li class="rounded-full bg-black/5 px-3 py-1 text-xs font-medium text-muted dark:bg-white/10">
+                            {tag}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+ 
+                    <div class="flex items-center justify-between pt-2 text-sm">
+                      {status === 'released' && (
+                        <span class="text-muted">
+                          {game.releaseDate ? `Released ${formatDate(game.releaseDate)}` : 'Released'}
+                        </span>
+                      )}
+                      {status === 'in-development' && (
+                        <span class="rounded-full border border-secondary px-3 py-1 text-xs font-semibold text-secondary">
+                          In development
+                        </span>
+                      )}
+                      {status === 'unreleased' && (
+                        <span class="rounded-full border border-black/20 px-3 py-1 text-xs font-semibold text-muted dark:border-white/20">
+                          Unreleased
+                        </span>
+                      )}
+                      <span class="font-semibold text-primary">View game →</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </section>
+</Layout>
+ 

@@ -1,0 +1,192 @@
+---
+import { YouTube } from '@astro-community/astro-embed-youtube';
+import Layout from '~/layouts/PageLayout.astro';
+import Lightbox from '~/components/feed/Lightbox.astro';
+
+const metadata = {
+  title: 'Poke My Balls',
+  description:
+    'A fun, simple, and addicting game, for the time when you have a couple of minutes to take your mind off of life. Colored balls drop from the top of the screen, and tap all of the right colors. Compete with your friends for the highest score. More balls drop the longer you play.',
+};
+
+const facts = [
+  { label: 'Platforms', value: 'iOS & Android' },
+  { label: 'Released', value: 'August 22, 2016' },
+  { label: 'Built with', value: 'Unity' },
+];
+
+const screenshots = [
+  { src: '/images/poke-my-balls/screen-main.jpg', alt: 'Poke My Balls menu' },
+  { src: '/images/poke-my-balls/screen-game.jpg', alt: 'Poke My Balls in-game' },
+  { src: '/images/poke-my-balls/screen-shop.jpg', alt: 'Poke My Balls shop' },
+  { src: '/images/poke-my-balls/screen-blue.jpg', alt: 'Poke My Balls menu with blue background active' },
+];
+
+const h2Class = 'text-2xl sm:text-3xl font-bold font-heading tracking-tight dark:text-white mb-6';
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero -->
+  <section
+    class="relative bg-cover bg-center"
+    style="background-image: url('/images/poke-my-balls/pmb-bg.jpg');"
+  >
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative px-4 md:px-6 py-20 sm:py-28 mx-auto max-w-3xl text-left text-white">
+      <h1 class="text-4xl md:text-6xl font-bold font-heading tracking-tighter mb-6">Poke My Balls</h1>
+      <p class="text-lg md:text-xl mb-8">
+        A fun, simple, and addicting game, for when you have a few minutes to lose yourself. Colored balls drop from the top of the screen; you tap all of the right colors. Compete with your
+        friends for the highest score. The game gets harder the longer you play.
+      </p>
+      <a
+        href="#download"
+        class="inline-block px-6 py-3 rounded-lg bg-white text-gray-900 font-semibold hover:bg-gray-200 transition"
+      >
+        Download
+      </a>
+    </div>
+  </section>
+
+  <!-- Trailer -->
+  <section class="px-4 md:px-6 py-12 sm:py-16 mx-auto max-w-3xl">
+    <div class="not-prose my-8 [&_lite-youtube]:!w-full [&_lite-youtube]:!max-w-none">
+      <YouTube id="UlICZOtaDQ0" />
+    </div>
+  </section>
+  
+  <!-- About -->
+  <section class="px-4 md:px-6 pb-12 sm:pb-16 mx-auto max-w-3xl">
+    <h2 class={h2Class}>About the Game</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
+      {
+        facts.map((fact) => (
+          <div class="rounded-lg border border-gray-700 bg-gray-900 p-4 text-center">
+            <p class="text-sm text-gray-400">{fact.label}</p>
+            <p class="text-lg font-semibold text-white">{fact.value}</p>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="prose lg:prose-xl dark:prose-invert max-w-none">
+      <p>
+        Poke My Balls is an iOS and Android arcade game. Colored balls fall down, You must poke all of one
+        color and none of the others. If you can tap your screen you can play Poke My Balls! Black balls, Blue
+        balls, Green balls, and Red balls too, they all drop into view. If you prefer blue, then tap the blue.
+        Compete with your friends for the highest score. The game gets harder the longer you play. Now get out there and
+        poke some balls!
+      </p>
+
+      <p>There are two other modes: Power Poking and Living by Poking</p>
+      <ul>
+        <li>
+          <strong>Power Poking:</strong> Along with falling balls are falling power-ups. There's a wall that blocks everything
+          from falling, a bomb that clears the screen, and a clock that slows time.
+        </li>
+        <li>
+          <strong>Living by Poking:</strong> Do you have coins from playing other modes? Spend them on lives that
+          extend your playtime. You can use 3 lives per game, which will allow you to get much higher scores.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Download -->
+  <section class="px-4 md:px-6 pb-16 sm:pb-20 mx-auto max-w-3xl">
+    <div id="download" class="text-center scroll-mt-24">
+      <h2 class={h2Class}>Download</h2>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a
+          href="https://play.google.com/store/apps/details?id=com.nerdherd.pokemyballs"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/images/google-play-badge.png" alt="Get it on Google Play" class="h-14 w-auto" />
+        </a>
+        <a
+          href="https://apps.apple.com/us/app/poke-my-balls/id1144772124"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/images/app_store.svg" alt="Download on the App Store" class="h-14 w-auto" />
+        </a>
+      </div>
+      <p class="mt-6 text-sm text-gray-500 dark:text-slate-400">
+        Leaving a review is greatly appreciated. It boosts the game in search.
+      </p>
+    </div>
+  </section>
+
+  <!-- Screenshot gallery -->
+  <section class="px-4 md:px-6 pb-12 sm:pb-16 mx-auto max-w-4xl">
+    <h2 class={h2Class}>Screenshot Gallery</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+      {
+        screenshots.map((shot) => (
+          <figure>
+            <button
+              type="button"
+              data-gallery="pmb-screenshots"
+              data-full={shot.src}
+              data-alt={shot.alt}
+              aria-label={`View screenshot: ${shot.alt}`}
+              class="block w-full overflow-hidden rounded-lg shadow-lg cursor-zoom-in"
+            >
+              <img
+                src={shot.src}
+                alt={shot.alt}
+                loading="lazy"
+                class="w-full h-auto hover:opacity-90 transition"
+              />
+            </button>
+            <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-slate-400">{shot.alt}</figcaption>
+          </figure>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Development story -->
+  <section class="px-4 md:px-6 pb-12 sm:pb-16 mx-auto max-w-3xl">
+    <h2 class={h2Class}>Development/Updates</h2>
+
+    <ol class="border-l-2 border-gray-300 dark:border-gray-700 ml-1.5 space-y-8">
+      <li class="relative pl-6">
+        <span class="absolute -left-[7px] top-2 h-3 w-3 rounded-full bg-primary"></span>
+        <h3 class="text-lg font-semibold">Summer 2016</h3>
+        <p class="mt-1 text-muted dark:text-slate-400">
+          I wanted to make the next Flappy Bird, and I had this idea floating around for some time. After
+          prototyping in Unity and BuildBox, I settled on Unity since BuildBox was too restrictive, and I wanted room to grow into. I built most of the game in a couple of days, all in JavaScript, since that was all I knew. It shipped on iOS on August 22nd, 2016, and on Android a few weeks later. Updates followed, adding a colorblind mode, more settings, and bug fixes.
+        </p>
+      </li>
+      <li class="relative pl-6">
+        <span class="absolute -left-[7px] top-2 h-3 w-3 rounded-full bg-primary"></span>
+        <h3 class="text-lg font-semibold">Over the next year</h3>
+        <p class="mt-1 text-muted dark:text-slate-400">
+          I'd learned C#, so I came back with fresh eyes and added two new game modes, Power Poking and Living by
+          Poking, plus in-app purchases to try to earn some revenue (which have now been removed). I avoided touching the old, messy JavaScript wherever I could.
+        </p>
+      </li>
+      <li class="relative pl-6">
+        <span class="absolute -left-[7px] top-2 h-3 w-3 rounded-full bg-primary"></span>
+        <h3 class="text-lg font-semibold">August 2017</h3>
+        <p class="mt-1 text-muted dark:text-slate-400">
+          Unity deprecated JavaScript in 2017, and I needed to stay current for iOS and Android updates, which meant rewriting
+          the whole codebase in C#. 
+        </p>
+      </li>
+      <li class="relative pl-6">
+        <span class="absolute -left-[7px] top-2 h-3 w-3 rounded-full bg-primary"></span>
+        <h3 class="text-lg font-semibold">At university</h3>
+        <p class="mt-1 text-muted dark:text-slate-400">
+          Learning polymorphism in my first proper programming course sparked an idea: rebuild the game like a console,
+          with a set of core systems and each game mode acting as a swappable cartridge. I rewrote everything around
+          that philosophy, and it's the version available today. I have no plans to update it further, it was a fun project to learn some basic programming through.
+        </p>
+      </li>
+    </ol>
+  </section> 
+
+  <Lightbox />
+</Layout>

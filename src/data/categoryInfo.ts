@@ -16,6 +16,6 @@ export const categoryInfo: Record<string, CategoryInfo> = {
     description: 'A monthly Hand-curated radio show, new theme every month. Tune in now.',
   },
   '20-game-challenge': {
-    description: 'After working on games for a decade I realized I never learned how to design games, just use an engine really well. THis is how I\'m gonna fix that.',
+    description: 'After working on games for a decade I realized I never learned how to design games, just use an engine really well. This is how I\'m gonna fix that.',
   },
 };

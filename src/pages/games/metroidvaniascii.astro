@@ -1,0 +1,145 @@
+---
+import { YouTube } from '@astro-community/astro-embed-youtube';
+import Layout from '~/layouts/PageLayout.astro';
+import Lightbox from '~/components/feed/Lightbox.astro';
+
+const metadata = {
+  title: 'MetroidvaniASCII',
+  description:
+    'A Metroidvania with an added dimension.',
+};
+
+const facts = [
+  { label: 'Platforms', value: 'PC' },
+  { label: 'Released', value: 'July 17, 2024' },
+  { label: 'Built with', value: 'Unity' },
+];
+
+const screenshots = [
+  { src: '/images/metroidvaniascii/screen-title.png', alt: 'MetroidvaniASCII title screen' },
+  { src: '/images/metroidvaniascii/screen-jump.png', alt: 'Jumping through room 2' },
+  { src: '/images/metroidvaniascii/screen-button.png', alt: 'The first button' },
+  { src: '/images/metroidvaniascii/screen-pickup.png', alt: 'View swapper pickup' },
+];
+
+const h2Class = 'text-2xl sm:text-3xl font-bold font-heading tracking-tight dark:text-white mb-6';
+
+---
+
+<Layout metadata={metadata}>
+
+  <!-- Title and intro -->
+  <section class="px-4 md:px-6 pt-16 sm:pt-24 pb-4 mx-auto max-w-3xl">
+    <h1 class="text-4xl md:text-6xl font-bold font-heading tracking-tighter mb-6">MetroidvaniaASCII</h1>
+    <p class="text-lg md:text-xl text-muted dark:text-slate-400">
+      I wanted to see just how far I could push an art style with only post-processing effects.
+    </p>
+  </section>
+
+  <!-- Trailer -->
+  <section class="px-4 md:px-6 pb-8 sm:pb-10 mx-auto max-w-3xl">
+    <div class="not-prose my-8 [&_lite-youtube]:!w-full [&_lite-youtube]:!max-w-none">
+      <YouTube id="Jn0u-AXJPOc" />
+    </div>
+  </section>
+
+      
+
+  <!-- About -->
+  <section class="px-4 md:px-6 pb-12 sm:pb-16 mx-auto max-w-3xl">
+    <h2 class={h2Class}>About the Game</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
+      {
+        facts.map((fact) => (
+          <div class="rounded-lg border border-gray-700 bg-gray-900 p-4 text-center">
+            <p class="text-sm text-gray-400">{fact.label}</p>
+            <p class="text-lg font-semibold text-white">{fact.value}</p>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="prose lg:prose-xl dark:prose-invert max-w-none">
+      <p>
+        I wanted to see just how far I could push an art style with only Post-Processing effects. I used primitives for shapes, solid colors for textures, basic procedural animation, and default fonts. I built a processing stack consisting of
+      </p>
+
+      <ol>
+        <li>A small amount of film grain</li>
+        <li>A good amount of bloom</li>
+        <li>A lot of chromatic abrasion</li>
+      </ol>
+
+      <p>
+        Which gets run into a fullscreen shader which pixelates the whole thing. There's also an ASCII filter that gets overlayed to convey that you are viewing the world through a different lens.
+      </p>
+
+      <p>
+        It’s a very basic prototype, there’s no sound, but it works with both keyboard and controllers. Here’s a trailer I made for it.
+      </p>
+    </div>
+
+    <!-- Second video (the trailer the text refers to) -->
+    <div class="not-prose my-8 [&_lite-youtube]:!w-full [&_lite-youtube]:!max-w-none">
+      <YouTube id="_aogxmFD1Ts" />
+    </div>
+
+    <div class="prose lg:prose-xl dark:prose-invert max-w-none">
+      <p>
+        The source is on <strong><a href="https://github.com/WeekieNHN/MetroidvaniASCII">GitHub</a></strong>, so you are welcome to modify or expand it yourself.
+      </p>
+    </div>
+  </section>
+
+  <!-- Screenshot gallery -->
+  <section class="px-4 md:px-6 pb-12 sm:pb-16 mx-auto max-w-3xl">
+    <h2 class={h2Class}>Screenshot Gallery</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+      {
+        screenshots.map((shot) => (
+          <figure>
+            <button
+              type="button"
+              data-gallery="mtv-screenshots"
+              data-full={shot.src}
+              data-alt={shot.alt}
+              aria-label={`View screenshot: ${shot.alt}`}
+              class="block w-full overflow-hidden rounded-lg shadow-lg cursor-zoom-in"
+            >
+              <img
+                src={shot.src}
+                alt={shot.alt}
+                loading="lazy"
+                class="w-full h-auto hover:opacity-90 transition"
+              />
+            </button>
+            <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-slate-400">{shot.alt}</figcaption>
+          </figure>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Playable demo (Unity WebGL build hosted in public/demos/metroidvaniascii/) -->
+  <section class="px-4 md:px-6 pb-12 sm:pb-16 mx-auto max-w-6xl">
+    <h2 class={h2Class}>Play it Here!</h2>
+    <div class="relative w-full overflow-hidden rounded-lg border border-gray-700 bg-black" style="aspect-ratio: 16 / 9;">
+      <iframe
+        id="demo-frame"
+        src="/demos/metroidvaniascii/index.html"
+        title="MetroidvaniASCII playable demo"
+        class="absolute inset-0 h-full w-full"
+        allow="fullscreen; gamepad; autoplay"
+        allowfullscreen
+        loading="lazy"
+      ></iframe>
+    </div>
+    <p class="mt-2 text-sm text-center text-gray-500 dark:text-slate-400">
+      Best played in fullscreen: use the button in the bottom-right. Click to grab keyboard focus, or plug in a controller.
+    </p>
+  </section>
+
+  <!-- Lightbox: provides the click handling and overlay for [data-gallery] buttons -->
+  <Lightbox />
+</Layout>

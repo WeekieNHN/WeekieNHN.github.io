@@ -150,3 +150,19 @@
   color: var(--shiki-dark) !important;
   background-color: var(--shiki-dark-bg) !important;
 }
+
+body {
+  background: transparent !important; /* AstroWind sets bg-page on body */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("/images/bg.png") center / cover no-repeat;
+  filter: blur(12px);
+  transform: scale(1.1); /* hides the soft, faded edges blur creates */
+}

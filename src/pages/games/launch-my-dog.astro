@@ -1,0 +1,200 @@
+---
+import { YouTube } from '@astro-community/astro-embed-youtube';
+import Layout from '~/layouts/PageLayout.astro';
+import Lightbox from '~/components/feed/Lightbox.astro';
+
+const metadata = {
+  title: 'Launch My Dog',
+  description:
+    'The hot-dog flinging physics-based puzzle game where you launch a hot dog into a bun. Things get in the way. Collect toppings, avoid Ketchup, experience anti-gravity, and go through portals to get your hot dog into its hot dog bun.',
+};
+
+const facts = [
+  { label: 'Platforms', value: 'iOS & Android' },
+  { label: 'Released', value: 'July 10, 2021' },
+  { label: 'Built with', value: 'Unity' },
+];
+
+const screenshots = [
+  { src: '/images/launch-my-dog/screen-1.jpg', alt: 'Launch My Dog in-game' },
+  { src: '/images/launch-my-dog/screen-2.jpg', alt: 'Launch My Dog main menu' },
+  { src: '/images/launch-my-dog/screen-3.jpg', alt: 'Launch My Dog in-game level 19' },
+  { src: '/images/launch-my-dog/screen-4.jpg', alt: 'Launch My Dog in-game level 30' },
+];
+
+const h2Class = 'text-2xl sm:text-3xl font-bold font-heading tracking-tight dark:text-white mb-6';
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero -->
+  <section
+    class="relative bg-cover bg-center"
+    style="background-image: url('/images/launch-my-dog/splash-bg.jpg');"
+  >
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative px-4 md:px-6 py-20 sm:py-28 mx-auto max-w-3xl text-left text-white">
+      <h1 class="text-4xl md:text-6xl font-bold font-heading tracking-tighter mb-6">Launch My Dog</h1>
+      <p class="text-lg md:text-xl mb-8">
+        The hot-dog flinging physics-based puzzle game where you launch a hot dog into a bun. Things get in the way.
+        Collect toppings, avoid ketchup, experience anti-gravity, and go through portals to get your hot dog into its
+        hot dog bun.
+      </p>
+      <a
+        href="#download"
+        class="inline-block px-6 py-3 rounded-lg bg-white text-gray-900 font-semibold hover:bg-gray-200 transition"
+      >
+        Download
+      </a>
+    </div>
+  </section>
+
+<!-- Trailer -->
+  <section class="px-4 md:px-6 py-12 sm:py-16 mx-auto max-w-3xl">
+    <div class="not-prose my-8 [&_lite-youtube]:!w-full [&_lite-youtube]:!max-w-none">
+      <YouTube id="Z0nJEmJ8Ms8" />
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="px-4 md:px-6 pb-12 sm:pb-16 mx-auto max-w-3xl">
+    <h2 class={h2Class}>About the Game</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
+      {
+        facts.map((fact) => (
+          <div class="rounded-lg border border-gray-700 bg-gray-900 p-4 text-center">
+            <p class="text-sm text-gray-400">{fact.label}</p>
+            <p class="text-lg font-semibold text-white">{fact.value}</p>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="prose lg:prose-xl dark:prose-invert max-w-none">
+      <p>
+        Launch My Dog is a tight, small game built for mobile, with trajectory prediction that adapts to whatever the hot dog is flying through, including gravity zones and portals.
+      </p>
+    </div>
+  </section>
+  
+  <!-- Download -->
+  <section class="px-4 md:px-6 pb-16 sm:pb-20 mx-auto max-w-3xl">
+    <div id="download" class="text-center scroll-mt-24">
+      <h2 class={h2Class}>Download</h2>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a
+          href="https://play.google.com/store/apps/details?id=com.NerdHerdNetwork.LaunchMyDog"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/images/google-play-badge.png" alt="Get it on Google Play" class="h-14 w-auto" />
+        </a>
+        <a
+          href="https://apps.apple.com/us/app/launch-my-dog/id1575435217"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/images/app_store.svg" alt="Download on the App Store" class="h-14 w-auto" />
+        </a>
+      </div>
+      <p class="mt-6 text-sm text-gray-500 dark:text-slate-400">
+        Leaving a review is greatly appreciated. It boosts the game in search.
+      </p>
+    </div>
+  </section>
+
+  <!-- Screenshot gallery -->
+  <section class="px-4 md:px-6 pb-12 sm:pb-16 mx-auto max-w-4xl">
+    <h2 class={h2Class}>Screenshot Gallery</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {
+        screenshots.map((shot) => (
+          <figure>
+            <button
+              type="button"
+              data-gallery="lmd-screenshots"
+              data-full={shot.src}
+              data-alt={shot.alt}
+              aria-label={`View screenshot: ${shot.alt}`}
+              class="block w-full overflow-hidden rounded-lg shadow-lg cursor-zoom-in"
+            >
+              <img
+                src={shot.src}
+                alt={shot.alt}
+                loading="lazy"
+                class="w-full h-auto hover:opacity-90 transition"
+              />
+            </button>
+            <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-slate-400">{shot.alt}</figcaption>
+          </figure>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Development story -->
+  <section class="px-4 md:px-6 pb-12 sm:pb-16 mx-auto max-w-3xl">
+    <h2 class={h2Class}>Development/Updates</h2>
+
+    <ol class="border-l-2 border-gray-300 dark:border-gray-700 ml-1.5 space-y-10">
+      <li class="relative pl-6">
+        <span class="absolute -left-[7px] top-2 h-3 w-3 rounded-full bg-primary"></span>
+        <h3 class="text-lg font-semibold">Late 2016</h3>
+        <p class="mt-1 text-muted dark:text-slate-400">
+          A few months after Poke My Balls released, I had the idea in the middle of the night: launch a hot dog into a hot dog bun. I started working the very next morning.
+          Over the next year, on and off, I built 108 levels across 12 mechanics. By summer 2018 it was
+          technically complete, but there was no spark. It wasn't fun to play. It was also a bloated mess where I put band-aids over band-aid solutions. After a small power outage corrupted some of the files I left it behind.
+        </p>
+      </li>
+
+      <li class="relative pl-6">
+        <span class="absolute -left-[7px] top-2 h-3 w-3 rounded-full bg-primary"></span>
+        <h3 class="text-lg font-semibold">February 2020: starting over</h3>
+        <p class="mt-1 text-muted dark:text-slate-400">
+          Fresh off a Poke My Balls overhaul, I restarted from scratch. This time I wanted to fix problems at the
+          root instead of piling workarounds on top of each other, I also began the search for the game's spark again. I looked at the launching itself, making it more fluid and human, rather than just a bunch of pre-set angles to choose from. It was much closer to Angry Birds.
+        </p>
+        <div class="mt-4">
+          <YouTube id="rx-Eqx3rSQ0" />
+        </div>
+      </li>
+
+      <li class="relative pl-6">
+        <span class="absolute -left-[7px] top-2 h-3 w-3 rounded-full bg-primary"></span>
+        <h3 class="text-lg font-semibold">Planning and cutting scope</h3>
+        <p class="mt-1 text-muted dark:text-slate-400">
+          Late 2020, scope creep was getting the best of me. I had planned other modes, a cosmetic store, and even a level editor. Realizing this was too much, I wrote a planning document with a clear end goal and a due date of July 10th, 2021. Since university, a pandemic, and other projects ate more time than I expected, the scope shrank. The level editor, random levels and circuits were cut, and
+          the level count dropped from 100 to 50 so every level could be unique and I could actually finish on time.
+        </p>
+      </li>
+
+      <li class="relative pl-6">
+        <span class="absolute -left-[7px] top-2 h-3 w-3 rounded-full bg-primary"></span>
+        <h3 class="text-lg font-semibold">The programming</h3>
+        <p class="mt-1 text-muted dark:text-slate-400">
+          With a smaller scope I could focus on what was already in the game. The physics are based on my high school
+          AP physics equation sheets. Trajectory prediction adapts to different mediums and portals, so that you can accurtately predict the launch of the dog through whatever I've decided to throw at you.
+          Portals are my favorite mechanic: they're physically accurate, and I used what I learned in
+          linear algebra to build a shader that slices the hot dog's geometry at one portal and clones it out of the
+          other.
+        </p>
+        <div class="mt-4">
+          <YouTube id="TJ6HugnHiuw" />
+        </div>
+      </li>
+
+      <li class="relative pl-6">
+        <span class="absolute -left-[7px] top-2 h-3 w-3 rounded-full bg-primary"></span>
+        <h3 class="text-lg font-semibold">Optimizing and shipping</h3>
+        <p class="mt-1 text-muted dark:text-slate-400">
+          Since this was a mobile game with expensive physics, optimization mattered. The 2018 version loaded every
+          level at once and only showed them when needed. This time I built a base scene with the UI and main menu and
+          loaded levels additively, which let me push the physics harder and make levels more complex. After a few
+          weeks of crunch and three nervous days waiting for Google Play's initial review, Launch My Dog released on July 10th, 2021, and the deadline was met.
+        </p>
+      </li>
+    </ol>
+  </section>
+
+  <Lightbox />
+</Layout>

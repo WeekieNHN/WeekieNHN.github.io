@@ -1,11 +1,11 @@
 ---
 import type { InferGetStaticPropsType, GetStaticPaths } from 'astro';
 
+import { Icon } from 'astro-icon/components';
 import Layout from '~/layouts/PageLayout.astro';
 import BlogList from '~/components/blog/List.astro';
 import Headline from '~/components/blog/Headline.astro';
 import Pagination from '~/components/blog/Pagination.astro';
-import Newsletter from '~/components/widgets/Newsletter.astro';
 import Breadcrumbs from '~/components/common/Breadcrumbs.astro';
 import { getPermalink, getBlogPermalink } from '~/utils/permalinks';
 // import PostTags from "~/components/blog/Tags.astro";
@@ -28,6 +28,17 @@ const breadcrumbs = [
   ...(currentPage > 1
     ? [{ text: 'Blog', href: getBlogPermalink() }, { text: `Page ${currentPage}` }]
     : [{ text: 'Blog' }]),
+];
+
+const buttonClass =
+  'inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-gray-800 bg-black text-white font-semibold text-sm hover:bg-gray-800 transition';
+
+// "Keep reading" buttons under the feed.
+const blogs = [
+  { text: 'Castle Wars Devlogs', slug: 'castle-wars-devlogs' },
+  { text: 'PortalDoom Devlogs', slug: 'portaldoom-devlogs' },
+  { text: '20 Game Challenge', slug: '20-game-challenge' },
+  { text: "Frank's Radio Show", slug: 'franks-radio-show' },
 ];
 
 // const allCategories = await findCategories();
@@ -55,23 +66,30 @@ const metadata = {
   <Breadcrumbs bar items={breadcrumbs} />
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
     <Headline
-      subtitle="A statically generated blog example with news, tutorials, resources and other interesting content related to AstroWind"
+      subtitle="Development logs, notes about my progress and what I think is interesting."
+      classes={{ container: '!mb-0 md:!mb-0' }}
     >
-      The Blog
+      The Blogs
     </Headline>
+    <!-- lLst of blog posts -->
     <BlogList posts={page.data} />
+    <!-- Quick links to the Blog Categories -->
+    <div class="mt-6 mb-10 text-center">
+      <div class="flex flex-wrap justify-center gap-3">
+        {
+          blogs.map((blog) => (
+            <a href={getPermalink(blog.slug, 'category')} class={buttonClass}>
+              {blog.text}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+    <!-- Pagination Links -->
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
     <!--
       <PostTags tags={allCategories} class="mb-2" title="Search by Categories:" isCategory />
       <PostTags tags={allTags}  title="Search by Tags:" />
     -->
   </section>
-  <Newsletter
-    tagline="Newsletter"
-    title="New articles in your inbox"
-    subtitle="Tutorials and notes about Astro, Tailwind CSS and the template, when they are published. Nothing else."
-    button="Subscribe"
-    disclaimer="Unsubscribe with one click. This form is a template: pass an <code>action</code> to connect it to your email tool."
-    classes={{ container: 'max-w-4xl' }}
-  />
 </Layout>

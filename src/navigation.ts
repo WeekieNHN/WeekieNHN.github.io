@@ -9,15 +9,7 @@ export const headerData = {
         { text: 'PortalDoom (Working Title)', href: getPermalink('/games/portaldoom') },
         { text: 'Launch My Dog', href: getPermalink('/games/launch-my-dog') },
         { text: 'Poke My Balls', href: getPermalink('/games/poke-my-balls') },
-        { text: 'More on Itch.io', href: 'https://weekie.itch.io/', target: '_blank' },
-      ],
-    },
-    {
-      text: 'Docs',
-      links: [
-        { text: 'Godot Dev Console', href: getPermalink('/docs/godot-dev-console') },
-        { text: 'Godot Localization', href: getPermalink('/docs/godot-localization') },
-        { text: 'Godot Menu System', href: getPermalink('/docs/godot-menu-system') },
+        { text: 'All Projects', href: getPermalink('/games/') },
       ],
     },
     {
@@ -29,6 +21,7 @@ export const headerData = {
         { text: 'Frank\'s Radio Show', href: getPermalink('franks-radio-show', 'category') },
       ],
     },
+    { text: 'Docs', href: getPermalink('/docs/') },
   ],
   socialLinks: [
     { ariaLabel: 'Patreon', icon: 'tabler:brand-patreon', href: 'https://www.patreon.com/c/Weekie' },
@@ -41,10 +34,10 @@ export const footerData = {
     {
       title: 'Games',
       links: [
+        { text: 'All Projects', href: getPermalink('/games/') },
         { text: 'PortalDoom (Working Title)', href: getPermalink('/games/portaldoom') },
         { text: 'Launch My Dog', href: getPermalink('/games/launch-my-dog') },
         { text: 'Poke My Balls', href: getPermalink('/games/poke-my-balls') },
-        { text: 'More on Itch.io', href: 'https://weekie.itch.io/' },
       ],
     },
     {
