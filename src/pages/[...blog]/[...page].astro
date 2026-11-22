@@ -33,13 +33,7 @@ const breadcrumbs = [
 const buttonClass =
   'inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-gray-800 bg-black text-white font-semibold text-sm hover:bg-gray-800 transition';
 
-// "Keep reading" buttons under the feed.
-const blogs = [
-  { text: 'Castle Wars Devlogs', slug: 'castle-wars-devlogs' },
-  { text: 'PortalDoom Devlogs', slug: 'portaldoom-devlogs' },
-  { text: '20 Game Challenge', slug: '20-game-challenge' },
-  { text: "Frank's Radio Show", slug: 'franks-radio-show' },
-];
+import { blogs } from '~/data/categoryInfo'; 
 
 // const allCategories = await findCategories();
 // const allTags = await findTags();

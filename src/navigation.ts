@@ -17,8 +17,8 @@ export const headerData = {
       links: [
         { text: 'PortalDoom Devlogs', href: getPermalink('portaldoom-devlogs', 'category') },
         { text: 'Castle Wars Devlogs', href: getPermalink('castle-wars-devlogs', 'category') },
-        { text: '20 Game Challenge', href: getPermalink('20-game-challenge', 'category') },
-        { text: 'Frank\'s Radio Show', href: getPermalink('franks-radio-show', 'category') },
+        // { text: '20 Game Challenge', href: getPermalink('20-game-challenge', 'category') },
+        // { text: 'Frank\'s Radio Show', href: getPermalink('franks-radio-show', 'category') },
       ],
     },
     { text: 'Docs', href: getPermalink('/docs/') },

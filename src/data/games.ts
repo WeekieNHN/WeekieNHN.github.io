@@ -19,7 +19,7 @@ export const games: Game[] = [
     tags: ['Godot', 'FPS', '3D'],
     // no releaseDate: in development
     sortDate: '2026-01-01',
-    url: '/games/portaldoom',
+    url: '/category/portaldoom-devlogs',
   },
   {
     title: 'Launch My Dog',
@@ -51,7 +51,7 @@ export const games: Game[] = [
     url: '/games/knockback-arena',
   },
   {
-    title: 'MetroidvaniASCII ',
+    title: 'MetroidvaniASCII',
     subtitle: 'A Metroidvania with an extra dimension',
     cover: '/images/metroidvaniascii/card-cover.png',
     description: 'A game where the only \"art\" is post-processing effects.',
@@ -59,5 +59,35 @@ export const games: Game[] = [
     // no releaseDate: in development
     releaseDate: '2024-07-17',
     url: '/games/metroidvaniascii',
+  },
+  {
+    title: 'Perfect Run',
+    subtitle: 'A speedrunning platform',
+    cover: '/images/perfect-run/card-cover.png',
+    description: 'You can restart as many times as you want, but you only get to run through it one time.\n Built for Code-for-a-Cause Mini Jam 2025',
+    tags: ['Godot', 'Game Jam', 'Platformer'],
+    // no releaseDate: in development
+    releaseDate: '2025-05-25',
+    url: '/games/perfect-run',
+  },
+  {
+    title: 'Clone Jitsu',
+    subtitle: 'A Card-Jitsu Clone',
+    cover: '/images/clone-jitsu/card-cover.jpg',
+    description: 'I wanted to make some basic card shaders, so I needed to make a card game. Enter Clone Jitsu, based on Club Penguin\'s Card Jitsu.',
+    tags: ['Godot', 'Card Game', 'Shaders'],
+    // no releaseDate: in development
+    releaseDate: '2025-02-15',
+    url: '/games/clone-jitsu',
+  },
+  {
+    title: 'Castle Wars',
+    subtitle: 'Multiplayer Arcade Sword Combat',
+    cover: '/images/castle-wars/card-cover.png',
+    description: 'Shelved Unity project based on the Halo: Reach custom game: Castle Wars. Basically Capture-the-Flag, swords only, with some physics jank in the way.',
+    tags: ['Unity', 'Multiplayer', 'Fish-Networking'],
+    // no releaseDate: in development
+    releaseDate: '2021-09-04',
+    url: '/category/castle-wars-devlogs',
   },
 ];

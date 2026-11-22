@@ -7,24 +7,17 @@ import { getFormattedDate } from '~/utils/utils';
 import TwitchLive from '~/components/feed/TwitchLive.astro';
 import { getYouTubeVideos } from '~/utils/youtube';
 import { getBlueskyPosts } from '~/utils/bluesky';
+import { blogs } from '~/data/categoryInfo'; 
 
 const metadata = { title: 'Weekiepedia' };
 
-// How many items to show from each source. Raise these for a longer feed.
+// How many items to show from each source. 
 const VIDEO_COUNT = 10;
 const BLUESKY_COUNT = 10;
 const BLOG_COUNT = 10;
 
 // Hostnames that count as your own site when a Bluesky post links to a blog post.
 const SITE_HOSTS = ['weekienhn.github.io'];
-
-// "Keep reading" buttons under the feed.
-const blogs = [
-  { text: 'Castle Wars Devlogs', slug: 'castle-wars-devlogs' },
-  { text: 'PortalDoom Devlogs', slug: 'portaldoom-devlogs' },
-  { text: '20 Game Challenge', slug: '20-game-challenge' },
-  { text: "Frank's Radio Show", slug: 'franks-radio-show' },
-];
 
 const allVideos = await getYouTubeVideos(50);
 const videos = allVideos.slice(0, VIDEO_COUNT);
