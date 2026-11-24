@@ -1,6 +1,6 @@
 site:
   name: Weekiepedia
-  site: 'https://weekienhn.github.io'
+  site: 'https://weekpedia.org'
   base: '/'
   trailingSlash: false
 
