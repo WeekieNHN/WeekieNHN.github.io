@@ -6,7 +6,7 @@ export const headerData = {
     {
       text: 'Games',
       links: [
-        { text: 'PortalDoom (Working Title)', href: getPermalink('/games/portaldoom') },
+        { text: 'PortalDoom (Working Title)', href: getPermalink('portaldoom-devlogs', 'category') },
         { text: 'Launch My Dog', href: getPermalink('/games/launch-my-dog') },
         { text: 'Poke My Balls', href: getPermalink('/games/poke-my-balls') },
         { text: 'All Projects', href: getPermalink('/games/') },
